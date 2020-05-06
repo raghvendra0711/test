@@ -1,0 +1,6058 @@
+/* @font-face {
+    font-family: 'GothamBook';
+    src: url('fonts/GothamBook.eot');
+    src: local('GothamBook'), url('fonts/GothamBook.woff') format('woff'), url('fonts/GothamBook.ttf') format('truetype');
+} */
+input:read-only,textarea:read-only {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+}
+
+a {
+    color: #84ccdd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    background: #FFF !important;
+    color: #545c60;
+    min-width: 1000px;
+    /* font-family: 'GothamBook' !important; */
+    font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Helvetica, Arial, sans-serif !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 98%;
+    margin: 0 10px;
+}
+
+.backend-wrap {
+    min-height: 540px;
+    overflow: hidden;
+}
+
+.backend-wrap h1 {
+    margin-top: 100px;
+}
+
+
+/*Header css starts*/
+
+header,
+.new-course {
+    width: 100%;
+    border-bottom: 2px solid #eee;
+}
+
+.main-header {
+    height: 55px;
+    background: #fff;
+}
+
+.sub-header {
+    height: 60px;
+    background: #1c1206;
+}
+
+.logo {
+    float: left;
+    width: 220px;
+}
+
+.logo h6 {
+    margin-top: 20px;
+}
+
+#logo {
+    float: left;
+    color: #84ccdd;
+}
+
+.categ-management {
+    float: left;
+    font-size: 14px;
+    line-height: 13px;
+    margin-left: 10px;
+    width: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+/*main header main css starts*/
+
+
+/*.sub-ul-tabs{ display: none;}*/
+
+.header-menu {
+    float: right;
+}
+
+.header-menu li {
+    float: left;
+    line-height: 50px;
+    list-style: none;
+    position: relative;
+}
+
+.header-menu li a {
+    padding: 20px 20px;
+    border-left: 1px solid #ccc;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    color: #545c60;
+}
+
+.header-menu li:last-child a {
+    border-right: 1px solid #ccc;
+}
+
+.header-menu li:hover a,
+.header-menu li.active a,
+.course-menu li:hover a,
+.course-menu li.view-active a {
+    color: #84ccdd;
+    border-bottom: 2px solid #84ccdd;
+}
+
+.header-menu li:hover ul.sub-ul-tabs a {
+    border-bottom: 1px solid #eee;
+}
+
+.sub-ul-tabs {
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    width: 200px;
+    background: #5bbbd3;
+    border-top: 1px solid #ccc;
+    z-index: 1;
+    border: 1px solid #eee;
+}
+
+.sub-ul-tabs li:last-child a {
+    border-right: 0;
+}
+
+.ul-header li {
+    position: relative;
+}
+
+.ul-header li:hover .sub-ul-tabs {
+    display: block;
+}
+
+.sub-ul-tabs li {
+    display: block;
+    float: none;
+    line-height: 35px;
+    border-bottom: 1px solid #B6D3DA;
+}
+
+.header-menu li:hover .sub-ul-tabs li a {
+    color: #fff;
+    border-bottom: 0;
+}
+
+.sub-ul-tabs li a:hover {
+    color: #fff;
+    background: #42A9C3;
+}
+
+.sub-ul-tabs li a {
+    display: block;
+    padding: 0px;
+    border-right: 1px solid #cccccc;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 5px;
+    border: 0;
+}
+
+
+/*main header main css ends*/
+
+
+/*course header css starts*/
+
+.course-menu li.review-active a {
+    border-bottom: 2px solid #5fd080;
+}
+
+.view-icon {
+    background: url(images/view.jpg);
+    width: 27px;
+    height: 20px;
+    display: inline-block;
+    top: 7px;
+    position: relative;
+}
+
+.edit-icon {
+    background: url(images/edit.jpg);
+    width: 28px;
+    height: 26px;
+    display: inline-block;
+    top: 7px;
+    position: relative;
+}
+
+.review-icon {
+    background: url(images/review.jpg);
+    width: 27px;
+    height: 26px;
+    display: inline-block;
+    top: 7px;
+    position: relative;
+}
+
+.archive-icon {
+    background: url(images/delete.jpg);
+    width: 23px;
+    height: 25px;
+    display: inline-block;
+    top: 7px;
+    position: relative;
+}
+
+.profile-icon {
+    background: url(images/profile.jpg);
+    width: 30px;
+    height: 25px;
+    display: inline-block;
+    top: 7px;
+    position: relative;
+}
+
+.create-icon {
+    background: url(images/plus.jpg);
+    width: 17px;
+    height: 18px;
+    display: inline-block;
+    top: 1px;
+    position: relative;
+    margin-right: 10px;
+}
+
+
+/*course header css ends*/
+
+
+/*Header css ends*/
+
+
+/*Menu css starts*/
+
+.course-menu {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.course-menu li {
+    float: left;
+    line-height: 58px;
+    width: 160px;
+    /*text-align: center;*/
+}
+
+.course-menu li a {
+    color: #c6c4c0;
+    padding: 18px 2px 20px 2px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+/*view course sub-menu*/
+
+.course-submenu,
+.review-submenu {
+    position: absolute;
+    min-height: 130px;
+    width: 100%;
+    background: #414143;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.course-menu li.view-active:hover div.course-submenu {
+    display: block !important;
+}
+
+.select-course {
+    float: left;
+    width: 500px;
+}
+
+.browse-course {
+    float: right;
+}
+
+.course-submenu p,
+.review-submenu p {
+    color: #c6c4c0;
+    font-size: 13px;
+}
+
+.slect-course {
+    overflow: hidden;
+    width: 310px;
+    float: left;
+    height: 31px;
+}
+
+.select-course input[type="text"] {
+    color: #7c7c7c;
+    float: left;
+    width: 350px;
+    height: 25px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.select-course select option {
+    background: #f5f5f5;
+}
+
+.select-course button {
+    padding: 4px 24px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.browse-course table {
+    background: #fff;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.browse-course table td {
+    padding: 10px 18px;
+    text-align: center;
+    border: 1px solid #d2d2d2;
+    border-bottom: 0;
+}
+
+
+/*view course sub-menu*/
+
+
+/*reveiw & launch sub-menu*/
+
+.course-review {
+    float: left;
+}
+
+.course-review table {
+    border-collapse: collapse;
+    width: 790px;
+}
+
+.course-review tbody {
+    background: #f5f5f5;
+    font-size: 14px;
+}
+
+.course-review td {
+    padding: 10px 20px;
+}
+
+.course-review thead td {
+    color: #c6c4c0;
+    width: 150px;
+    font-size: 14px;
+}
+
+.course-review tbody tr:hover,
+.course-review tbody tr.active {
+    cursor: pointer;
+    background: #5fd080;
+    font-weight: bold;
+}
+
+.filter-course {
+    float: right;
+}
+
+.filter-course p {
+    margin-top: 130px;
+}
+
+
+/*reveiw & launch sub-menu*/
+
+.btn.create-course {
+    float: right;
+    margin-top: 13px;
+    color: #F4F4F4;
+    letter-spacing: 1px;
+}
+
+
+/*Page Header css starts*/
+
+.new-course-tabs {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 56px;
+}
+
+.new-course,
+.new-course-tabs {
+    background: #f2f2f2;
+}
+
+.new-course-tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0;
+}
+
+.new-course-tabs ul li {
+    display: inline-block;
+}
+
+.new-course-tabs ul li a {
+    padding: 12px 40px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #545c60;
+    width: 20px;
+    height: 50px;
+}
+
+.new-course-tabs ul li a.active,
+.new-course-tabs ul li a:hover {
+    background: #5bbbd3;
+    color: #fff;
+    width: 20px;
+}
+
+.new-course-tabs ul li:first-child a {
+    margin-left: 20px;
+    background-position: 232px -8px;
+}
+
+.new-course-tabs ul li:first-child a.active {
+    background: #5bbbd3;
+}
+
+.new-course-inclusion-tabs {
+    margin-top: 20px;
+    line-height: 25px;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+}
+
+.new-course-inclusion-tabs h2 {
+    width: auto;
+    font-size: 16px;
+}
+
+
+/*Page Header css ends*/
+
+
+/*Zend form css starts*/
+
+#courses,
+#CourseContent {
+    margin-top: 30px;
+}
+
+.crud-add-update {
+    padding: 40px 0 0 0;
+    display: inline-block;
+}
+
+.crud-add-update form {
+    width: 936px;
+    /* width: 938px; */
+    margin: 0 0 30px 50px;
+    display: inline-block;
+}
+
+.form-width {
+    width: 1182px !important;
+}
+
+.crud-add-update form ul li {
+    display: inline-block;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.crud-add-update form li input[type="text"],
+.crud-add-update li textarea {
+    width: 320px;
+    float: left;
+}
+
+.crud-add-update li select {
+    width: 700px !important;
+    float: left;
+    height: 25px;
+}
+
+.crud-add-update form li label {
+    width: 190px;
+}
+
+form#courses li label,
+form#EditCourse li label {
+    width: 225px;
+}
+
+select.multiple,
+form#Groups select#course_id,
+form#Banners dl.zend_form select#cluster_id,
+form#Banners dl.zend_form select#country_id {
+    min-width: 330px;
+    min-height: 100px;
+}
+
+form#courses div.element label,
+form#EditCourse div.element label {
+    width: auto;
+    margin-left: 20px;
+}
+
+li.subscribePriceContainer ul li {
+    width: auto;
+    float: left;
+}
+
+li.subscribePriceContainer ul {
+    width: 700px;
+    display: inline-block;
+    position: relative;
+    left: 70px;
+    padding-top: 10px;
+    background: #f5f5f5;
+}
+
+li.subscribePriceContainer ul li fieldset ul {
+    background: none;
+    padding: 0;
+}
+
+li.subscribePriceContainer ul li input[type="text"],
+li.subscribePriceContainer ul li select {
+    width: 100%;
+}
+
+li.subscribePriceContainer ul li:last-child {
+    position: relative;
+    left: 70px;
+}
+
+li.subscribePriceContainer ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+.crud-add-update dd {
+    margin: 0;
+}
+
+#conversionForIndia fieldset {
+    width: auto;
+}
+
+#conversionForIndia fieldset legend {
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    font-weight: bold;
+}
+
+#for_india-label {
+    font-size: 22px;
+    padding: 10px 0;
+    display: block;
+    font-weight: bold;
+}
+
+#for_us-label {
+    font-size: 22px;
+    padding: 10px 0;
+    display: block;
+    font-weight: bold;
+}
+
+#conversionForUs fieldset {
+    width: auto;
+}
+
+#conversionForUs fieldset legend {
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    font-weight: bold;
+}
+
+
+/* #CourseConversion #for_us-label, #for_india-label{width:20%;} */
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+li.countryPrice ul li {
+    width: auto;
+    float: left;
+}
+
+li.countryPrice ul li fieldset ul li {
+    width: 15%;
+}
+
+li.countryPrice ul li fieldset ul li:first-child {
+    width: 170px;
+    ;
+}
+
+li.countryPrice ul {
+    width: 600px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 0px;
+}
+
+li.countryPrice ul li ul {
+    background: none;
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius:4px;
+}
+
+li.countryPrice ul li input[type="text"],
+li.countryPrice ul li select {
+    width: 100%;
+}
+
+li.countryPrice ul li ul li label {
+    width: auto;
+}
+
+li.countryPrice ul li ul li div select {
+    width: 100%;
+}
+
+li.countryPrice ul li ul li div.element input[type="text"] {
+    /*position:relative;top:5px;*/
+    width: 100%;
+}
+
+form#practicetests li.countryPrice ul li ul li div select {
+    width: 100%;
+}
+
+li.countryPrice ul li ul li div.element button.remove {
+    position: relative;
+    top: 10px;
+}
+
+li.countryPrice ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.countryPrice ul li fieldset ul li:nth-child(4) {
+    left: 10px;
+    position: relative;
+}
+
+li.countryPrice ul li fieldset ul li:last-child {
+    left: 10px;
+}
+
+#Bundles li.countryPrice ul li fieldset ul li {
+    width: 25%;
+}
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+li.examFaq ul li {
+    width: auto;
+    float: left;
+}
+
+li.examFaq ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 10px;
+}
+
+li.examFaq ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.examFaq ul li input[type="text"] {
+    width: 100%;
+}
+
+li.examFaq ul li ul li label {
+    width: auto;
+}
+
+li.examFaq ul li ul li div select {
+    width: 160px;
+}
+
+li.examFaq ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li.examFaq ul li ul li div.element input[type="text"].question {
+    width: 180px;
+}
+
+li.examFaq ul li ul li div.element button.remove {
+    position: relative;
+    top: 30px;
+}
+
+li.examFaq ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.examFaq ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.examFaq ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 5px;
+}
+
+input.dir_show_at_top {
+    position: absolute;
+    left: 105px;
+    top: 7px;
+}
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+li.webinarFaq ul li {
+    width: auto;
+    float: left;
+}
+
+li.webinarFaq ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 10px;
+}
+
+li.webinarFaq ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.webinarFaq ul li input[type="text"] {
+    width: 100%;
+}
+
+li.webinarFaq ul li ul li label {
+    width: auto;
+}
+
+li.webinarFaq ul li ul li div select {
+    width: 160px;
+}
+
+li.webinarFaq ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li.webinarFaq ul li ul li div.element input[type="text"].question {
+    width: 180px;
+}
+
+li.webinarFaq ul li ul li div.element button.remove {
+    position: relative;
+    top: 10px;
+}
+
+li.webinarFaq ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.webinarFaq ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.webinarFaq ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 5px;
+}
+
+
+/*
+/*
+* srinivas has to replace with commonn class name later */
+
+li.keyFeatures ul li {
+    width: auto;
+    float: left;
+}
+
+li.keyFeatures ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 0px;
+}
+
+li.keyFeatures ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.keyFeatures ul li input[type="text"] {
+    width: 100%;
+}
+
+li.keyFeatures ul li ul li label {
+    width: auto;
+}
+
+li.keyFeatures ul li ul li div select {
+    width: 160px;
+}
+
+li.keyFeatures ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li.keyFeatures ul li ul li div.element input[type="text"].keyName {
+    width: 180px;
+}
+
+li.keyFeatures ul li ul li div.element button.remove {
+    position: relative;
+    top: 10px;
+}
+
+li.keyFeatures ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.keyFeatures ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.keyFeatures ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 5px;
+}
+
+
+/*
+/*
+* srinivas has to replace with commonn class name later */
+
+li.practiceFaq ul li {
+    width: auto;
+    float: left;
+}
+
+li.practiceFaq ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 0px;
+}
+
+li.practiceFaq ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.practiceFaq ul li ul li label {
+    width: auto;
+}
+
+li.practiceFaq ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li.practiceFaq ul li ul li div.element input[type="text"].question {
+    width: 180px;
+}
+
+li.practiceFaq ul li ul li div.element button.remove {
+    position: relative;
+    top: 10px;
+}
+
+li.practiceFaq ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.practiceFaq ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.practiceFaq ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 5px;
+}
+
+
+/*
+/*
+/*
+/*
+* srinivas has to replace with commonn class name later */
+
+li#aboutBundle ul li {
+    /* width: auto; */
+    float: left;
+}
+
+li#aboutBundle ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    /* left: 80px; */
+    padding-top: 0px;
+}
+
+li#aboutBundle ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li#aboutBundle ul li ul li label {
+    /* width: auto; */
+    padding: 5px 0;
+}
+
+li#aboutBundle ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li#aboutBundle ul li ul li div.element input[type="text"].question {
+    width: 180px;
+}
+
+li#aboutBundle ul li ul li div.element button.remove {
+    position: relative;
+    top: 10px;
+}
+
+li#aboutBundle ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li#aboutBundle ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li#aboutBundle ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    clear: both;
+}
+
+
+/*
+/*
+* srinivas has to replace with commonn class name later */
+
+li.accessDays ul li {
+    width: auto;
+    float: left;
+}
+
+li.accessDays ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 0px;
+}
+
+li.accessDays ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.accessDays ul li ul li label {
+    width: auto;
+}
+
+li.accessDays ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 320px;
+}
+
+li.accessDays ul li ul li div.element button.remove {
+    position: relative;
+    top: 24px;
+}
+
+li.accessDays ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.accessDays ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.accessDays ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 5px;
+}
+
+form#Bundles li.countryPrice ul li ul li div.element select.country {
+    width: 150px;
+}
+
+form#Bundles li.countryPrice ul li ul li div.element input[type="text"] , 
+form#Bundles li.countryPrice ul li ul li div.element select {
+    top: 0;
+    margin-top:10px;
+}
+
+
+
+li.accessDays ul li ul.errors {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+li.accessDays ul li button#accessDays-add {
+    margin-top: 20px;
+}
+
+
+/*
+/*
+* srinivas has to replace with commonn class name later */
+
+li.noOfSets ul li {
+    width: auto;
+    float: left;
+}
+
+li.noOfSets ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 0px;
+}
+
+li.noOfSets ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.noOfSets ul li input[type="text"] {
+    width: 100%;
+}
+
+li.noOfSets ul li ul li label {
+    width: auto;
+}
+
+li.noOfSets ul li ul li div select {
+    width: 160px;
+}
+
+li.noOfSets ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li.noOfSets ul li ul li div.element input[type="text"].question {
+    width: 180px;
+}
+
+li.noOfSets ul li ul li div.element button.remove {
+    position: relative;
+    top: 10px;
+}
+
+li.noOfSets ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.noOfSets ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.noOfSets ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 5px;
+}
+
+li.noOfSets ul li ul.errors {
+    width: auto;
+    left: 0;
+    top: 3px;
+}
+
+form#practicetests li.noOfSets ul li ul li div.element input[type="text"] {
+    width: 320px;
+}
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+li.recommendations ul li {
+    width: auto;
+    float: left;
+}
+
+li.recommendations ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 10px;
+}
+
+li.recommendations ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.recommendations ul li input[type="text"] {
+    width: 100%;
+}
+
+li.recommendations ul li ul li label {
+    width: auto;
+}
+
+li.recommendations ul li ul li div select {
+    width: 160px;
+}
+
+li.recommendations ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li.recommendations ul li ul li div.element input[type="text"].question {
+    width: 180px;
+}
+
+li.recommendations ul li ul li div.element button.remove {
+    position: relative;
+    top: 24px;
+}
+
+li.recommendations ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.recommendations ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.recommendations ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 25px;
+}
+
+
+/*
+* srinivas has to replace with commonn class name later */
+
+input[type="text"],
+select,
+textarea {
+    border: 1px solid #999;
+    min-height: 25px;
+    border-radius: 4px;
+    padding-left: 5px;
+}
+
+label {
+    font-size: 16px;
+    display: inline-block;
+    color: #333;
+    float: left;
+    line-height: 25px;
+}
+
+.errors li {
+    font-size: 11px;
+    list-style: none;
+    color: red;
+    padding-top: 2px;
+}
+
+.errorMain li {
+    font-size: 20px;
+    list-style: none;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+#SaveCourse,
+#SaveLabel {
+    height: 35px;
+    border-radius: 7px;
+}
+
+#secondaryLabels {
+    height: 80px;
+    overflow-y: scroll;
+}
+
+#courses input[type="checkbox"] {
+    vertical-align: bottom;
+    top: -2px;
+    left: -2px;
+    position: relative;
+}
+
+#ilt-label label,
+#accreditor_id-label label {
+    vertical-align: top;
+}
+
+
+/*label add more*/
+
+.subscribePriceContainer {
+    margin-top: 20px;
+    width: 70%;
+    padding: 20px;
+}
+
+.crud-add-update li.subform {
+    margin: 0px;
+}
+
+#labels ul li.subscribePriceContainer fieldset ul li {
+    width: 15%;
+}
+
+#labels ul li.subscribePriceContainer fieldset ul li select.accessDays,
+#labels ul li.subscribePriceContainer fieldset ul li input.subscriptionPrice,
+#labels ul li.subscribePriceContainer fieldset ul li button.remove {
+    position: relative;
+    top: 25px;
+}
+
+#labels ul li.subscribePriceContainer fieldset ul li select.accessDays,
+#labels ul li.subscribePriceContainer fieldset ul li input.subscriptionPrice {
+    top: 0;
+}
+
+#labels ul li.subscribePriceContainer fieldset ul li label {
+    width: auto;
+}
+
+#labels ul li.subscribePriceContainer fieldset ul li:first-child {
+    width: 170px;
+}
+
+.crud-add-update li.subform fieldset {
+    border: 0;
+    padding: 0px;
+    width: 88%;
+}
+
+.crud-add-update li.subform fieldset li {
+    margin-top: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.crud-add-update li.subform fieldset li input[type="text"] {
+    width: 90px;
+}
+
+li.myAddClass button.add {
+    position: relative;
+    left: 70px;
+}
+
+.crud-add-update li.subform button {
+    margin-top: 0px;
+}
+
+
+/*label add more*/
+
+
+/* learning path */
+
+.crud-add-update li#trustedByLogos li.subform fieldset li:nth-child(2) {
+    clear: left;
+}
+
+.crud-add-update li#trustedByLogos li.subform fieldset li:nth-child(3) {
+    clear: left;
+}
+
+.crud-add-update li#trustedByLogos li.subform fieldset li:nth-child(4) {
+    clear: left;
+}
+
+.crud-add-update li#trustedByLogos li.subform fieldset li:nth-child(5) {
+    position: relative;
+    margin-top: -160px;
+    margin-bottom: 20px;
+}
+
+.crud-add-update li#trustedByLogos li.subform fieldset li:nth-child(5) textarea {
+    min-height: 190px;
+    height: 190px;
+}
+
+li.examFaq#trustedByLogos ul li ul li label {
+    position: relative;
+    top: 4px;
+}
+
+li.examFaq#trustedByLogos ul li div button#trustedByLogos-add {
+    margin-top: -132px;
+}
+
+li.examFaq#trustedByLogos ul li div button#trustedByLogos-add {
+    margin-top: -28px;
+}
+
+li.examFaq#trustedByLogos ul li fieldset {
+    position: relative;
+}
+
+.crud-add-update li#trustedByLogos li.subform fieldset li:last-child button.remove {
+    right: -745px;
+    top: -100px;
+}
+
+li.examFaq#trustedByLogos ul li fieldset ul li ul.errors {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+li.examFaq#trustedByLogos ul li fieldset ul li ul.errors li {
+    float: left;
+    left: -78px;
+    top: 6px;
+}
+
+.crud-add-update li#courseDirectors li.subform fieldset li:nth-child(2) {
+    clear: left;
+}
+
+.crud-add-update li#courseDirectors li.subform fieldset li:nth-child(3) {
+    clear: left;
+}
+
+.crud-add-update li#courseDirectors li.subform fieldset li:nth-child(4) {
+    clear: left;
+}
+
+.crud-add-update li#courseDirectors li.subform fieldset li:nth-child(5) {
+    position: relative;
+    margin-top: -160px;
+    margin-bottom: 0px;
+}
+
+.crud-add-update li#courseDirectors li.subform fieldset li:nth-child(6) {
+    clear: left;
+    margin-bottom: 10px;
+    margin-top: -55px;
+}
+
+
+/*.crud-add-update li#courseDirectors li.subform fieldset{margin-bottom:10px;}*/
+
+.crud-add-update li#courseDirectors li.subform fieldset li:nth-child(5) textarea {
+    min-height: 240px;
+    height: 240px;
+}
+
+li.examFaq#courseDirectors ul li ul li label {
+    position: relative;
+    top: 4px;
+}
+
+li.examFaq#courseDirectors ul li div button#trustedByLogos-add {
+    margin-top: -132px;
+}
+
+li.examFaq#courseDirectors ul li div button#trustedByLogos-add {
+    margin-top: -28px;
+}
+
+li.examFaq#courseDirectors ul li fieldset {
+    position: relative;
+}
+
+.crud-add-update li#courseDirectors li.subform fieldset li:last-child button.remove {
+    right: -195px;
+    top: -125px;
+    position: absolute;
+}
+
+.crud-add-update li#courseDirectors {
+    margin-bottom: 30px;
+}
+
+li.examFaq#courseDirectors ul li fieldset ul li ul.errors {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+li.examFaq#courseDirectors ul li fieldset ul li ul.errors li {
+    float: left;
+    left: -78px;
+    top: 6px;
+}
+
+.crud-add-update form ul li.alt-id-courses {
+    width: 640px;
+    float: left;
+}
+
+li.alt-id-courses div select,
+.crud-add-update form ul li.alt-courses div select {
+    width: 182px !important;
+    float: left;
+    overflow: scroll;
+    position: relative;
+}
+
+li.alt-id-courses div ul,
+li.alt-courses div ul {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    float: left !important;
+    width: 245px !important;
+}
+
+li.alt-id-courses div ul li,
+li.alt-courses div ul li {
+    font-size: 12px;
+    color: #000;
+    margin: 0 0 5px 0;
+    padding-right: 15px !important;
+}
+
+.crud-add-update form #Bundles {
+    /* width: 1019px; */
+    width: 1182px;
+}
+
+.crud-add-update form li.alt-hidden-courses,
+.crud-add-update form ul li.alt-courses div#course_or_tmp-label {
+    display: none;
+}
+
+.crud-add-update form ul li.alt-courses {
+    width: 542px;
+}
+
+#osl-label {
+    float: right;
+    position: relative;
+    right: 800px;
+}
+
+#ilt-label {
+    float: right;
+    position: relative;
+    right: 617px;
+    margin-bottom: 20px;
+}
+
+
+/*#accreditor_id-label{margin-top: 20px;}
+campaign form css starts*/
+
+#campaign_source-label,
+#CouponCourse #type-label,
+#CouponSubscription #type-label {
+    text-transform: capitalize;
+    float: left;
+    font-weight: bold;
+}
+
+#campaign_source-element label:first-child,
+#CouponCourse #type-element label:first-child,
+#CouponSubscription #type-element label:first-child {
+    float: left;
+    top: 0;
+    left: 0;
+}
+
+#campaign_source-element label,
+#CouponCourse #type-element label,
+#CouponSubscription #type-element label {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: -17px;
+    left: 30px;
+}
+
+form#CampaignCourse li.subform fieldset#fieldset-trainingTypes ul li:nth-child(3) {
+    clear: left;
+    display: inherit;
+    position: relative;
+    top: 5px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li:nth-child(3) input[type="checkbox"] {
+    position: relative;
+    left: -4px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li:nth-child(7) input[type="checkbox"] {
+    position: relative;
+    left: 8px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li:nth-child(7) {
+    position: relative;
+    top: -3px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li:first-child {
+    position: relative;
+    top: -3px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li:nth-child(7) div#trainingTypes-ilt3-label {
+    margin-right: 26px;
+}
+
+
+/*campaign form css ends*/
+
+
+/*label order form css starts*/
+
+#label-order {
+    margin-top: 40px;
+}
+
+#label-order table {
+    border-collapse: separate;
+}
+
+#label-order td {
+    width: 50%;
+    vertical-align: top;
+}
+
+#label-order li {
+    margin: 10px 0;
+    padding: 7px;
+    cursor: pointer;
+}
+
+#label-order li span {
+    float: left;
+}
+
+#label-order td b {
+    text-transform: uppercase;
+}
+
+
+/*label order form css ends*/
+
+
+/*course coupon css starts
+#OnlineSelfLearning-label,#Classroom-label,#LVC-label,#isGeneric-label{position: relative;left: 30px;top: 10px;}
+#OnlineSelfLearning-element,#Classroom-element,#LVC-element,#isGeneric-element{position: relative;top: -18px;}*/
+
+#access_OnlineSelfLearning-element label,
+#access_Classroom-element label,
+#access_Classroom-label,
+#access_OnlineSelfLearning-label,
+#access_LVC-label,
+#access_LVC-element label {
+    float: left;
+    margin-right: 20px;
+}
+
+#access_OnlineSelfLearning-element label:last-child,
+#access_Classroom-element label:last-child,
+#access_LVC-element label:last-child {
+    float: none;
+}
+
+
+/*course coupon css ends*/
+
+
+/*Zend form css ends*/
+
+
+/*footer css starts*/
+
+.footer {
+    background: #333;
+    text-align: center;
+    font-size: 12px;
+    color: #f5f5f5;
+    padding: 5px;
+}
+
+
+/*footer css ends*/
+
+
+/*button css starts*/
+
+.btn,
+input[type="button"],
+input[type="submit"],
+button {
+    display: inline-block;
+    padding: 3px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+form#course-content-form input[type="button"] {
+    display: inline-block;
+    padding: 3px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #40b7d9;
+    border-color: #46b8da;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open>.dropdown-toggle.btn-info {
+    background-color: #31b0d5;
+    border-color: #269abc;
+    color: #fff;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.multiple {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.highlightText {
+    background-color: #cccccc;
+}
+
+
+/*button css ends*/
+
+form ul,
+li {
+    list-style: outside none none;
+}
+
+.submit {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #40b7d9;
+    border-color: #46b8da;
+}
+
+.submit:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open>.dropdown-toggle.btn-info {
+    background-color: #31b0d5;
+    border-color: #269abc;
+    color: #fff;
+}
+
+
+/* all */
+
+::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 12px;
+}
+
+::-moz-placeholder {
+    color: #ccc;
+    font-size: 12px;
+}
+
+
+/* firefox 19+ */
+
+:-ms-input-placeholder {
+    color: #ccc;
+    font-size: 12px;
+}
+
+
+/* ie */
+
+input:-moz-placeholder {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.new-pricing-div {
+    width: 100%;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+table td,
+table th {
+    border: 1px solid #ccc;
+    font-size: 13px;
+    padding: 10px;
+}
+
+table th {
+    background: #6f6f6f;
+    color: #fff;
+}
+
+table td {
+    background: #f5f5f5;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+/* course */
+
+form dl.zend_form dt {
+    float: left;
+    width: 35%;
+    margin-top: 10px;
+}
+
+form dl.zend_form dd {
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+}
+
+form dl.zend_form dd input[type="text"] {
+    width: 320px;
+}
+
+form dl.zend_form dd input[type="password"] {
+    width: 320px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    min-height: 25px;
+}
+
+form dl.zend_form dd select.multiple {
+    height: 128px;
+}
+
+form dl.zend_form dd select.multiple,
+select.multiple,
+form dl.zend_form dd select#labelsInclude,
+form dl.zend_form dd select#course_id,
+form dl.zend_form dd select#clustersIncluded,
+form dl.zend_form dd select#clustersExcluded,
+form#Bundles select#course_id,
+form#CouponCourse select#label_id,
+form#CouponSubscription select#label_id {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+dd#type-element label {
+    margin-right: 20px;
+}
+
+form#Exams textarea,
+form#Webinars textarea,
+form#Bundles textarea,
+form#Articles textarea {
+    min-width: 320px;
+    min-height: 100px;
+}
+
+form#Articles textarea {
+    width: 320px;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    /* WebKit browsers */
+}
+
+:-moz-placeholder {
+    color: #999;
+    opacity: 1;
+    /* Mozilla Firefox 4 to 18 */
+}
+
+::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+    /* Mozilla Firefox 19+ */
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    /* Internet Explorer 10+ */
+}
+
+form#CampaignSubscription dl.zend_form dt,
+form#CampaignCourse dl.zend_form dt {
+    width: 28%;
+}
+
+form#CampaignCourse li.subform {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+}
+
+li.subform fieldset#fieldset-trainingTypes {
+    float: left;
+    width: 100%;
+}
+
+li.subform fieldset#fieldset-trainingTypes legend {
+    float: left;
+    width: 25%;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul {
+    float: left;
+    width: 60%;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li div {
+    float: left;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li div label {
+    width: auto;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li select {
+    width: 85px;
+}
+
+li.subform fieldset#fieldset-trainingTypes ul li input[type="checkbox"] {
+    position: relative;
+    top: 3px;
+}
+
+form#Groups div.element {
+    float: left;
+}
+
+form#Groups ul li ul li div.element {
+    float: none;
+}
+
+form#Groups li.recommendations ul {
+    padding-top: 0;
+}
+
+form#Groups ul li div#coursesInclude-label {
+    width: 160px;
+    float: left;
+}
+
+form#Venues dd#city_id-element {
+    height: 25px;
+}
+
+form#Venues dl.zend_form dt,
+form#Accreditors dl.zend_form dt,
+form#MediaCoverage dl.zend_form dt {
+    width: 200px;
+}
+
+form#Venues dd#address-element textarea.longtext {
+    min-height: 100px;
+    min-width: 320px;
+}
+
+.longtext {
+    min-height: 100px;
+    min-width: 500px;
+}
+
+.job-designation-container li.subform fieldset li input[type="text"] {
+    display: inline;
+    width: 200px;
+}
+
+.job-designation-container select {
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 150px;
+    display: block;
+}
+
+#courseBenefits li.subform fieldset li.job-designation-container {
+    margin-bottom: 50px;
+}
+
+#courseBenefits div[id$="getsalary-label"] {
+    display: none
+}
+
+#courseBenefits .job-designation-container select {
+    min-height: 0px;
+}
+
+form#courseBenefits .job-designation-container .remove {
+    position: absolute;
+    left: 198px;
+    margin-top: 14px;
+}
+
+#courseBenefits .job-designation-container select {
+    min-height: 100px;
+}
+
+#courseBenefits .job-designation-container li.subform fieldset ul.errors li {
+    width: 97px;
+}
+
+.shorttext {
+    max-width: 200px;
+}
+
+form#Testimonail dd#isGeneric-element {
+    height: 25px;
+    position: inherit;
+    top: 0;
+}
+
+form#Testimonail dd#course_id-element select#course_id,
+form#workshop dd#course_id-element select#course_id {
+    height: 25px;
+}
+
+form#Testimonail dl.zend_form dt,
+form#workshop dl.zend_form dt,
+form#CouponSubscription dl.zend_form dt,
+form#CampaignSubscription dl.zend_form dt,
+form#trainers dl.zend_form dt,
+form#addPricing dl.zend_form dt {
+    width: 195px;
+}
+
+form#Articles dl.zend_form dt {
+    width: 266px;
+}
+
+form#Testimonail dl.zend_form dt#isGeneric-label {
+    left: 0;
+}
+
+form#workshop dl.zend_form dd,
+form#trainers dl.zend_form dd,
+form#CouponCourse dl.zend_form dd,
+form#CouponSubscription dl.zend_form dd {
+    min-height: 25px;
+}
+
+form#CouponCourse dd#OnlineSelfLearning-element input[type="checkbox"],
+form#CouponCourse dd#Classroom-element input[type="checkbox"],
+form#CouponCourse dd#LVC-element input[type="checkbox"] {
+    position: relative;
+    top: 3px;
+}
+
+form#CouponCourse dl.zend_form dt {
+    width: 260px;
+}
+
+
+/*content structure css starts*/
+
+#sectionTeplateGeneric,
+#oslSectionTemplates,
+#iltSectionTemplates {
+    background: #f2f2f2;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #E5E2E2;
+}
+
+form#course-content-form ul li label {
+    position: relative;
+    top: 0;
+}
+
+#course-content-form #sectionTeplateGeneric li,
+#course-content-form #oslSectionTemplates li,
+#course-content-form #iltSectionTemplates li {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+#course-content-form li div:first-child,
+#course-content-form li div {
+    width: 50%;
+    float: left;
+    margin-right: 10px;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}
+
+#course-content-form li div {
+    width: 34%;
+    padding: 5px;
+    text-align: left;
+}
+
+#course-content-form li div.delete {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    float: left;
+    width: 4%;
+    float: right;
+    position: relative;
+    top: 5px;
+}
+
+#course-content-form span.templateHeading {
+    font-size: 14px;
+}
+
+#course-content-form span.templateHeading:nth-child(2) {
+    width: 45%;
+    float: right;
+}
+
+#course-content-form li label {
+    width: auto;
+}
+
+form#course-content-form {
+    width: 650px;
+    margin: 30px auto 0 150px;
+    position: relative;
+    /*left:-50px;*/
+}
+
+
+/*content structure css ends*/
+
+form#CourseFaq,
+form#ExamCertification,
+form#GenericInclusion,
+form#InclusionTemplates {
+    width: 650px;
+    float: left;
+}
+
+
+/*form#CourseFaq dl.zend_form dt{width:auto;} */
+
+form#CourseFaq input#Save {
+    background: #40b7d9;
+    color: #fff;
+    border-color: #46b8da;
+}
+
+form#ExamCertification dl.zend_form dt,
+form#InclusionTemplates dl.zend_form dt {
+    width: 100%;
+}
+
+input[type="submit"] {
+    background: #40b7d9;
+    color: #fff;
+    border-color: #46b8da;
+}
+
+form#GenericInclusion li.subform fieldset {
+    width: 515px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+form#GenericInclusion li.subform fieldset label {
+    width: 85px;
+}
+
+form#GenericInclusion li.subform fieldset input[type="text"] {
+    width: 420px;
+}
+
+form#GenericInclusion li.subform fieldset textarea {
+    min-width: 420px;
+    min-height: 100px;
+}
+
+form#GenericInclusion li div.element .add {
+    position: relative;
+    left: 85px;
+}
+
+form#GenericInclusion li.subform fieldset .remove {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+
+form#GenericInclusion dt#Save-label {
+    width: 85px;
+}
+
+div.new-course-inclusion-tabs {
+    /*background:#E6E7E9;*/
+    padding: 10px 0px 10px 10px;
+    position: relative;
+    top: -35px;
+    bottom: -35px;
+    min-height: 575px;
+}
+
+div.new-course-inclusion-tabs .inclusion-tabs-inner {
+    background: #fff;
+    padding: 0 10px;
+    position: relative;
+    top: 25px;
+    border-left: 5px solid #5BBBD3;
+    margin-top: 20px;
+}
+
+div.new-course-inclusion-tabs .inclusion-tabs-inner h2 {
+    padding: 0px 0 5px 0;
+    margin: 0;
+}
+
+div.new-course-inclusion-tabs .inclusion-tabs-inner ul li {
+    border-bottom: 1px dotted #ccc;
+    line-height: 35px;
+}
+
+div.new-course-inclusion-tabs .inclusion-tabs-inner ul li a {
+    display: block;
+    color: #707070;
+    text-decoration: none;
+}
+
+div.new-course-inclusion-tabs .inclusion-tabs-inner ul li a:hover {
+    color: #5BBBD1;
+}
+
+dt,
+dd {
+    min-height: 25px;
+}
+
+form#defaultbannerform div#decorated_form dd fieldset select {
+    height: 25px;
+}
+
+form#defaultbannerform div#decorated_form dd fieldset {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+form#defaultbannerform div#decorated_form dd fieldset dl div {
+    margin-top: 10px;
+    width: 50%;
+    float: left;
+}
+
+form#defaultbannerform div#decorated_form dd fieldset dl div label {
+    width: 100px;
+    float: left;
+    line-height: 48px;
+    height: 50px;
+    overflow: hidden;
+}
+
+form#defaultbannerform div#decorated_form dd fieldset dl div input[type="text"] {
+    width: 230px;
+}
+
+form#defaultbannerform div#decorated_form dd fieldset dl div select {
+    width: 240px;
+}
+
+form#defaultbannerform div#decorated_form dd fieldset dl div p {
+    position: relative;
+    top: 20px;
+    right: -28px;
+}
+
+form#defaultbannerform #add_more-row,
+form#defaultbannerform #remove_previous-row,
+form#defaultbannerform #uploaddefaultbanners-row {
+    width: auto;
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+form#defaultbannerform #add_more-row label,
+form#defaultbannerform #remove_previous-row label,
+form#defaultbannerform #uploaddefaultbanners-row label {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+form#defaultbannerform #add_more-row {
+    margin-left: 40px;
+}
+
+form#defaultbannerform #add_more-row .addmorebtn {
+    background: #f0ad4e;
+    color: #fff;
+}
+
+form#defaultbannerform #remove_previous-row .addmorebtn {
+    background: #d9534f;
+    color: #fff;
+}
+
+span.banner-success {
+    color: #555;
+    border-radius: 5px;
+    font-family: Tahoma, Geneva, Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px;
+    margin: 0 0 0 40px;
+    background: #e9ffd9;
+    border: 1px solid #a6ca8a;
+    position: relative;
+    top: -9px;
+}
+
+form#defaultbannerform dt#country_ids-label label.optional {
+    position: relative;
+    left: 40px;
+}
+
+table.commonDataTable {
+    width: 100%;
+    /* display: inline-block; */
+    overflow-x: auto;
+}
+
+form#Videos dl.zend_form dd#course_id-element select#course_id {
+    height: 25px;
+}
+
+form#Videos dl.zend_form dt,
+form#Banners dl.zend_form dt,
+form#GeneralFaq dl.zend_form dt {
+    width: 195px;
+}
+
+form#Webinars li.countryPrice ul li fieldset ul li:last-child input[type="text"] {
+    top: 7px;
+    position: relative;
+}
+
+form#Webinars li.countryPrice ul li fieldset ul li:nth-child(4) input[type="text"] {
+    top: 7px;
+    position: relative;
+}
+
+form#practicetests li.countryPrice ul li fieldset ul li div,
+form#Bundles li.countryPrice ul li fieldset ul li div {
+    min-height: 25px;
+}
+
+form#practicetests li.countryPrice ul li fieldset ul li:nth-child(4),
+form#practicetests li.countryPrice ul li fieldset ul li:last-child,
+form#Bundles li.countryPrice ul li fieldset ul li:nth-child(4),
+form#Bundles li.countryPrice ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+form#label-order table tr td {
+    width: auto;
+}
+
+form#label-order table tr:last-child td:last-child {
+    background: none;
+    border: 0;
+    text-align: left;
+}
+
+form#Articles ul li div.element {
+    float: left;
+    margin-right: 5px;
+}
+
+ul.errorMain li {
+    font-size: 14px;
+}
+
+form ul li.buttons div.submit-element {
+    margin-left: 160px;
+}
+
+form#courses ul li.buttons div.submit-element,
+form#EditCourse ul li.buttons div.submit-element {
+    margin-left: 225px;
+}
+
+form#ExamCertification dl.zend_form dd .cke_reset,
+form#CourseFaq dl.zend_form dd .cke_reset {
+    width: 685px !important;
+}
+
+
+/* form dl.zend_form dt#email-label label.required{float:right;} */
+
+form.courseForm li.subform fieldset#fieldset-trainingTypes legend {
+    width: 225px;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul {
+    width: 70%;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li {
+    padding-left: 10px;
+    overflow: hidden;
+    display: block;
+    background: #f5f5f5;
+    border-radius: 0 5px 5px 0px;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:first-child {
+    top: 0;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li div {
+    font-style: italic;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li div.element {
+    margin-left: -15px;
+    font-style: normal;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:first-child,
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(3),
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(5) {
+    float: left;
+    margin-right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:first-child div.element,
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(3) div.element,
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(5) div.element {
+    margin-left: 0;
+    font-style: normal;
+}
+
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:first-child div,
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(3) div,
+form.courseForm ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(5) div {
+    font-style: normal;
+}
+
+form#courses ul li.subform fieldset#fieldset-trainingTypes ul li:first-child input[type="checkbox"],
+form#courses ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(3) input[type="checkbox"],
+form#courses ul li.subform fieldset#fieldset-trainingTypes ul li:nth-child(5) input[type="checkbox"] {
+    top: 3px;
+}
+
+form#courses li.subform fieldset#fieldset-trainingTypes ul li input[type="checkbox"] {
+    top: -2px;
+}
+
+span.pager {
+    display: inline-block;
+    width: auto;
+}
+
+span.pager form {
+    float: left;
+    width: auto;
+}
+
+span.pager form input[type="text"] {
+    border: 1px solid #EBEBEB;
+    background-color: #F5F5F5;
+    color: #0072bc;
+    font-weight: normal;
+    min-height: 20px;
+    text-align: center;
+    padding-left: 0;
+    width: 40px !important;
+    border-radius: 0;
+}
+
+span.pager a {
+    display: block;
+    text-align: left;
+    line-height: 17px;
+    padding: 3px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+span.pager a:link,
+span.pager a:visited {
+    border: 1px solid #EBEBEB;
+    text-decoration: none;
+    background-color: #F5F5F5;
+    color: #0072bc;
+    font-weight: normal;
+}
+
+span.pager a:hover,
+span.pager form input[type="text"]:hover {
+    background-color: #DDEEFF;
+    border: 1px solid #BBDDFF;
+    color: #0072BC;
+}
+
+form#CouponCourse dl.zend_form dd#access_Online_Self_Learning-element label {
+    margin-right: 20px;
+}
+
+form#addPricing ul li.daysPricing ul li.subform fieldset {
+    width: 100%;
+}
+
+form#addPricing ul li.daysPricing ul li.subform fieldset legend {
+    width: 165px;
+    float: left;
+    position: relative;
+    top: 25px;
+}
+
+form#addPricing ul li.daysPricing ul li.subform fieldset ul {
+    float: left;
+    width: 335px;
+    margin-left: 10px;
+}
+
+form#addPricing ul li.daysPricing ul li.subform fieldset ul li {
+    width: 45%;
+    display: inline-block;
+}
+
+form#addPricing ul li.daysPricing ul li.subform fieldset ul li input[type="text"] {
+    width: 135px;
+}
+
+form#addPricing ul li div.element {
+    float: left;
+}
+
+form#workshop ul li div.element {
+    display: inline-block;
+}
+
+table.commonDataTable .select-box-filter {
+    display: none;
+    padding: 0;
+    height: 0;
+}
+
+table.commonDataTable tr.sorting_header td {
+    background: #6f6f6f;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+}
+
+form#Webinars dl.zend_form li.seoData label {
+    width: 28%;
+}
+
+form#Webinars dl.zend_form dt {
+    width: 28%;
+}
+
+form#Webinars li.countryPrice ul,
+form#Webinars li.webinarFaq ul,
+form#Webinars li.recommendations ul {
+    left: 130px;
+}
+
+form#Webinars li.countryPrice ul li:last-child,
+form#Webinars li.webinarFaq ul li:last-child,
+form#Webinars li.recommendations ul li:last-child {
+    left: 130px;
+}
+
+form#Webinars li.countryPrice ul li fieldset ul li:last-child {
+    left: 10px;
+}
+
+form#Webinars li.webinarFaq ul li fieldset ul li:last-child {
+    left: 0px;
+}
+
+form#Webinars li.recommendations ul li fieldset ul li:last-child {
+    left: 0px;
+}
+
+form#CouponCourse dd label {
+    margin-right: 15px;
+}
+
+.course-faq-editor ul li:first-child+li div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.job-designation-container ul li div {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+}
+
+.job-designation-container #remove-element {
+    float: right;
+    width: auto;
+}
+
+div#contentCourse-new-answer-label {
+    display: inline-block;
+}
+
+div.time-picker {
+    display: block;
+    left: 369px;
+    top: 915px;
+    width: 320px !important;
+}
+
+div.time-picker {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #aaa;
+    height: 191px;
+    margin: 0;
+    overflow: auto;
+    position: absolute;
+    width: 4em;
+    z-index: 99;
+}
+
+div.time-picker li.selected {
+    background: none repeat scroll 0 0 #0063ce;
+    color: #fff;
+}
+
+div.time-picker li {
+    cursor: pointer;
+    font: 12px/1 Helvetica, Arial, sans-serif;
+    height: 10px;
+    padding: 4px 3px;
+}
+
+li.course-faq-editor .cke_contents {
+    width: 98%;
+}
+
+.courseListAll {
+    height: 200px !important;
+    width: 710px !important;
+}
+
+
+/* Filter Css Starts*/
+
+.page-count {
+    margin: 3px 5px;
+    font-size: 13px;
+    clear: both;
+    float: right;
+    position: relative;
+    top: 33px;
+}
+
+.ColVis.TableTools {
+    margin-bottom: 10px;
+}
+
+.ColVis.TableTools button {
+    background: #EFA23B;
+    color: #fff;
+}
+
+.ColVis_collection {
+    text-align: left;
+}
+
+.ColVis_collection button.TableTools_Button {
+    text-align: left;
+    border-radius: 0;
+    width: 158px !important;
+}
+
+.filter-error {
+    color: red;
+    margin-left: 472px;
+    position: relative;
+    top: 30px;
+}
+
+#data-table_wrapper table.dataTable td {
+    padding: 7px 10px;
+}
+
+#data-table_wrapper table.dataTable {
+    margin-bottom: 20px;
+}
+
+
+/* Filter Css Starts*/
+
+
+/*chapter preview video css*/
+
+.video-subform.subform {
+    padding: 10px;
+}
+
+.video-subform.subform ul {
+    padding: 10px 0 10px 20px;
+}
+
+.video-subform.subform legend {
+    font-weight: bold;
+}
+
+.chapter-subform.subform {
+    padding: 10px 0;
+}
+
+.chapter-subform.subform #add-label {
+    display: none;
+}
+
+
+/*chapter preview video css*/
+
+.articleSingle {
+    padding: 3px;
+}
+
+.articleSingle:hover {
+    background: #84ccdd;
+    cursor: pointer;
+}
+
+#relatedArticleList,
+#relatedEbookList,
+#relatedWebinarList {
+    margin-top: 30px;
+    border: 1px solid #aaa;
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+#relatedArticles,
+#relatedEbooks,
+#relatedWebinars {
+    margin-left: 160px;
+}
+
+.relatedArticles li button.remove,
+.relatedEbooks li button.remove,
+.relatedWebinars li button.remove {
+    /*position: relative;top: -50px;left: 550px;*/
+    margin-bottom: 10px;
+}
+
+.crud-add-update form#passPricing li.countryPrice ul {
+    width: 950px;
+}
+
+.crud-add-update form#passPricing li.countryPrice ul li fieldset ul li:nth-child(4) {
+    left: 0;
+}
+
+.crud-add-update form#passPricing li.countryPrice ul li.subform fieldset ul li:nth-child(6) {
+    left: 10px;
+    position: relative;
+}
+
+.articleImageHint {
+    font-size: 11px;
+    color: #04B404;
+}
+
+.articleImageHint b {
+    color: #000000 !important;
+}
+
+
+/*header label inline listing*/
+
+ul.label-listing {
+    left: -781px;
+    width: 866px;
+}
+
+ul.label-listing li {
+    border-left: 1px solid #B6D3DA;
+    float: left;
+    width: 172px;
+}
+
+
+/*header label inline listing*/
+
+.error_msg {
+    color: red;
+    margin-left: 53px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.lecturePublishNote {
+    color: green;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.lecture-form {
+    min-width: 1000px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+span.lct-url {
+    border: 1px solid #999;
+    min-height: 25px;
+    border-radius: 4px;
+    padding-left: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+span.lct-url input {
+    border: 0;
+    float: left;
+}
+
+span.lct-url span.simp-url {
+    float: left;
+    width: auto;
+    line-height: 25px;
+}
+
+.lct-publish {
+    margin: 10px 0;
+}
+
+.lct-publish input {
+    float: left;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+
+.lecture-form form#lecturePage ul {
+    margin-top: 30px;
+}
+
+.lecture-form form#lecturePage ul li {
+    border: 1px solid #D0D0D0;
+    margin-bottom: 1px;
+}
+
+.lecture-form form#lecturePage ul li ul {
+    margin: 0px;
+}
+
+.lecture-form form#lecturePage ul li ul li .inner-elements {
+    margin: 0 20px;
+}
+
+.lecture-inner {
+    height: 404px;
+    overflow-y: scroll;
+    margin-bottom: 25px !important;
+}
+
+.chapter_names {
+    position: relative;
+}
+
+.save_btn {
+    position: absolute;
+    right: 60px;
+    background: #46b8da;
+    color: #fff;
+    padding: 5px;
+    top: 5px;
+    line-height: normal;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.lecture-form form#lecturePage ul li ul li {
+    border: 0;
+    padding: 0px;
+}
+
+.lecture-form form#lecturePage ul li ul li h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #222;
+    background: #f5f5f5;
+    padding: 0 20px;
+    line-height: 35px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.lecture-form form#lecturePage ul li h2 {
+    font-size: 18px;
+    font-weight: 400;
+    background: #4e4e4e;
+    color: #fff;
+    padding: 0 20px;
+    line-height: 35px;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+}
+
+.lecture-form form#lecturePage ul li h2:after {
+    display: inline-block;
+    content: " +";
+    position: absolute;
+    color: #000;
+    right: 17px;
+    top: -1px;
+    font-weight: bold;
+}
+
+.lecture-form form#lecturePage ul li h2.sec-active:after {
+    content: " -";
+    right: 19px;
+    top: -2px;
+}
+
+.lecture-form form#lecturePage ul li ul li h3.sec-active:after {
+    content: " -";
+    right: 19px;
+    top: -2px;
+}
+
+.lecture-form form#lecturePage ul li h2:before {
+    display: inline-block;
+    content: "";
+    width: 25px;
+    border-radius: 50%;
+    height: 25px;
+    position: absolute;
+    background: #fff;
+    right: 10px;
+    top: 4px;
+}
+
+.lecture-form form#lecturePage ul li ul li h3:after {
+    display: inline-block;
+    content: " +";
+    border-radius: 5px;
+    position: absolute;
+    color: #8E8E8E;
+    right: 18px;
+    top: -1px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.lecture-form form#lecturePage ul li ul li h3.chp-active:after {
+    content: " -";
+    right: 20px;
+    top: -2px;
+}
+
+.lecture-form form#lecturePage ul li ul li h3:before {
+    display: inline-block;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    position: absolute;
+    background: #fff;
+    right: 10px;
+    top: 4px;
+    border: 1px solid #B9B9B9;
+}
+
+.lecture-form b.lectureChapter {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.lecture-form form#lecturePage .main-button {
+    margin: 20px 0;
+}
+
+.lecture-form span.errors {
+    color: #ff0000;
+    line-height: 25px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#lectureSeoPopup .errors {
+    font-size: 18px;
+    list-style: none;
+    color: red;
+    padding-top: 2px;
+}
+
+#Seo select {
+    width: 55%;
+}
+
+#metatags .content {
+    width: 54%;
+}
+
+.crud-add-update #metatags li.subform fieldset {
+    width: 100%
+}
+
+.crud-add-update #metatags li {
+    margin-bottom: 10px;
+}
+
+.crud-add-update #metatags li button {
+    margin-left: 160px;
+    margin-top: -10px;
+}
+
+#twitterCards .longtext,
+#fbOpenGraph .longtext {
+    width: 54% !important;
+}
+
+.createMetatag {
+    margin-left: 168px;
+}
+
+.relatedArticlesSectionMain .subform,
+.relatedEbookSectionMain .subform,
+.relatedWebinarSectionMain .subform {
+    background: #f5f5f5 none repeat scroll 0 0;
+    cursor: move;
+}
+
+.webinarSingle,
+.ebookSingle,
+.articleSingle {
+    cursor: pointer;
+}
+
+.webinarSingle:hover,
+.ebookSingle:hover,
+.articleSingle:hover {
+    background: #ffffff none repeat scroll 0 0;
+}
+
+.addPricingNote {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.addNonMasterNote {
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.lecture-inner textarea {
+    resize: none;
+}
+
+.fadeContainer {
+    background: #eee none repeat scroll 0 0;
+    height: 100%;
+    opacity: 0.8;
+    padding-top: 120px;
+    position: absolute;
+    text-align: center;
+    width: 64%;
+    z-index: 999;
+}
+
+.fadeHide {
+    display: none;
+}
+
+.crud-add-update form #b2b_contents-label {
+    display: inline-block;
+    float: left;
+}
+
+.crud-add-update form #b2b_contents-label+.element,
+#master_certificate_short_description-label,
+#master_certificate_short_description-label+.element,
+#company_card_yourself_contents-label+.element,
+#company_card_managers_contents-label+.element,
+#company_card_osl_contents-label+.element,
+#company_card_lvc_contents-label+.element,
+#classroom_card_contents-label+.element,
+#about_city-label+.element {
+    float: left;
+}
+
+dt#flexi_card_contents-label,
+dt#osl_contents-label,
+dt#company_card_yourself_contents-label,
+dt#company_card_managers_contents-label,
+dt#company_card_osl_contents-label,
+dt#company_card_lvc_contents-label,
+dt#classroom_card_contents-label,
+dt#about_city-label {
+    width: 225px;
+    float: left;
+    margin-top: 20px;
+}
+
+dt#flexi_card_contents-label label {
+    padding-left: 10px;
+}
+
+dt#flexi_card_contents-label+dd,
+dt#osl_contents-label+dd,
+dt#company_card_yourself_contents-label+dd,
+dt#company_card_managers_contents-label+dd,
+dt#company_card_osl_contents-label+dd,
+dt#company_card_lvc_contents-label+dd,
+dt#classroom_card_contents-label+dd,
+dt#about_city-label+dd {
+    float: left;
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+li.courseTool ul li {
+    width: auto;
+    float: left;
+}
+
+li.courseTool ul {
+    width: 800px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    padding-top: 10px;
+}
+
+li.courseTool ul li ul {
+    background: none;
+    padding: 0;
+}
+
+li.courseTool ul li input[type="text"] {
+    width: 100%;
+}
+
+li.courseTool ul li ul li label {
+    width: auto;
+}
+
+li.courseTool ul li ul li div select {
+    width: 160px;
+    margin-top: 5px;
+}
+
+li.courseTool ul li ul li div.element input[type="text"] {
+    position: relative;
+    top: 5px;
+    width: 380px;
+}
+
+li.courseTool ul li ul li div.element input[type="text"].question {
+    width: 180px;
+}
+
+li.courseTool ul li ul li div.element button.remove {
+    position: absolute;
+    top: 30px;
+}
+
+li.courseTool ul li:last-child {
+    position: relative;
+    left: 80px;
+}
+
+li.courseTool ul li fieldset ul li:last-child {
+    left: 0;
+}
+
+li.courseTool ul li fieldset ul li div {
+    padding: 0;
+    margin: 0;
+    height: 5px;
+}
+
+li.courseTool ul li ul li div select.courseTool {
+    height: 200px;
+}
+
+
+/* Below section is for payment page */
+
+#product_list {
+    display: inline-block;
+}
+
+#product_list .partial-payment-message {
+    width: 500px;
+    height: 125px;
+    background-color: #F2F6F9;
+    position: absolute;
+    left: 500px;
+    top: 240px;
+    border-radius: 4px;
+}
+
+#product_list .partial-payment-message .label {
+    font-size: 14px;
+    color: #81868A;
+    padding: 20px 0 15px 20px;
+    margin: 0;
+}
+
+#product_list .partial-payment-message ul {
+    color: #484F57;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 28px;
+    padding-top: 4px;
+}
+
+#product_list .partial-payment-message ul,
+#product_list .partial-payment-message ul li {
+    list-style: inside;
+}
+
+
+#product_list .partial-payment-message hr {
+    color: #E1E6EA;
+    margin: 0 20px;
+}
+
+#product_list fieldset {
+    padding: 0 10px 20px 10px;
+    border-radius: 3px;
+    border-width: thin;
+}
+
+#product_list fieldset legend {
+    padding: 10px;
+}
+
+#product_list label {
+    width: 170px;
+    font-size: 16px;
+    text-align: left;
+    display: inline-block;
+}
+
+#product_list .form_field_set {
+    padding: 5px;
+    clear: both;
+}
+
+#product_list select {
+    font-size: 14px;
+    height: 31px;
+    padding: 5px;
+    width: 261px;
+    border-radius: 3px;
+}
+
+#product_list input {
+    font-size: 14px;
+    height: 31px;
+    padding: 5px;
+    width: 261px;
+    border-radius: 3px;
+}
+
+#product_list .checkbox {
+    height: auto;
+    width: 15px !important;
+    margin: 5px;
+}
+
+#product_list .auto-width {
+    width: auto !important;
+}
+
+#product_list .small_input_box input {
+    width: 150px;
+}
+
+#product_list .small_input_box select {
+    width: 150px;
+}
+
+#product_list .very_small_select_box {
+    width: 90px !important;
+}
+
+#product_list .very_small_input_box {
+    width: 85px !important;
+}
+
+#product_list .button-cst {
+    padding: 6px;
+    border-radius: 3px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#product_list .hidden {
+    display: none;
+}
+
+#product_list .input-error {
+    border-color: #ff0000;
+}
+
+#product_list .form_field_set.small_input_box.product-row-main.error input,
+#product_list .form_field_set.small_input_box.product-row-main.error select {
+    background-color: #FFECED;
+}
+
+#product_list .form_field_set.small_input_box.product-row-main .error-message {
+   display: none;
+}
+
+#product_list .form_field_set.small_input_box.product-row-main.error .error-message {
+    font-size: 12px;
+    color: #FF0000;
+    line-height: 14px;
+    margin: 5px 5px;
+    display: block;
+}
+
+#advance-amount {
+    text-align: right;
+    font-size: 16px !important;
+    font-family: GothamBook;
+    color: #545c60;
+}
+
+#advance-amount-wrapper {
+    margin-bottom: 5px;
+}
+
+.total_selling_block {
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.total_selling_block > .label,
+.total_selling_block > .value {
+    height: 28px;
+    line-height: 28px;
+}
+
+.total_selling_block > .label {
+    flex-basis: 65%;
+}
+
+.total_selling_block > .value {
+    flex-basis: 30%;
+}
+
+.total_selling_block > .space-down {
+    margin-bottom: 20px;
+}
+
+.total_selling_block > hr {
+    flex-basis: 75%;
+    margin-left: 25%;
+}
+
+.total_selling_block > .balance-due {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 35%;
+}
+
+.total_selling_block > .net-total-all {
+    font-weight: bold;
+}
+
+#product_list .total_selling_block > .advanced-payment {
+    text-align: right;
+    max-width: 18% !important;
+}
+
+.selling_amount_fieldset {
+    width: 400px;
+    float: right;
+    padding: 10px;
+}
+
+#payment-generate-button {
+    clear: both;
+    display: block;
+    margin: 15px 0;
+    float: right;
+    padding: 5px 10px;
+}
+
+.city-page-tab {
+    position: relative !important;
+    width: 100%;
+    top: 0;
+}
+
+.error,
+.errors {
+    color: #ff0000;
+}
+
+.custom-text-left {
+    text-align: left;
+}
+
+.course-intro-text .course_intro {
+    line-height: 21px;
+}
+
+.course-city-page {
+    margin-bottom: 100px;
+}
+
+.course-city-page .course_btn {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.exam-certification td {
+    padding: 10px;
+}
+
+.city-page-tabber-hide {
+    display: none;
+}
+
+.city-page-tab ul li.active a {
+    background: #5bbbd3;
+    color: #fff;
+}
+
+.edit_mode label {
+    width: 110px;
+}
+
+.edit_mode textArea {
+    width: 90%;
+}
+
+.save_btn_block {
+    width: 100%;
+    text-align: center;
+}
+
+.save_btn_block input {
+    width: 200px;
+}
+
+.city_page_save:hover {
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+.city_page_clear:hover {
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+.city_page_status_active {
+    background: #04B404 !important;
+    color: #fff;
+}
+
+.city-page-add-clone {
+    display: none;
+}
+
+.errorMsg {
+    margin-top: 20px;
+}
+
+.add_more_course_desc:hover {
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+#cke_city_page_course_desc_ans {
+    float: left;
+    width: calc(100% - 135px) !important;
+}
+
+.course-city-page .course_btn {
+    background: #00a6df;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.course-city-page .course_btn:hover {
+    background: #0487b3;
+}
+
+.course-city-page .course_btn.disable:hover {
+    background: #00a6df;
+}
+
+.course-city-page .course_btn.disable {
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+#cke_city_page_course_intro_desktop {
+    float: left;
+    width: calc(100% - 135px) !important;
+    margin-bottom: 30px;
+}
+
+#cke_city_page_course_ans_add {
+    float: left;
+    width: calc(100% - 100px) !important;
+    margin-bottom: 30px;
+}
+
+#cke_city_page_course_exam_cert_ans {
+    float: left;
+    width: calc(100% - 120px) !important;
+    margin-bottom: 30px;
+}
+
+#cke_city_page_exam_cert_ans_add {
+    float: left;
+    width: calc(100% - 100px) !important;
+    margin-bottom: 30px;
+}
+
+#cke_city_page_course_faq_ans {
+    float: left;
+    width: calc(100% - 120px) !important;
+    margin-bottom: 30px;
+}
+
+#cke_city_page_ans_add {
+    float: left;
+    width: calc(100% - 100px) !important;
+    margin-bottom: 30px;
+}
+
+#cke_city_page_faq_ans_add {
+    float: left;
+    width: calc(100% - 100px) !important;
+    margin-bottom: 30px;
+}
+
+#cke_city_page_cd_ans_add {
+    float: left;
+    width: calc(100% - 100px) !important;
+    margin-bottom: 30px;
+}
+
+.display-response-msg {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: green;
+    font-size: 18px;
+}
+
+.error-city-page-form {
+    margin-left: 108px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#callingCode {
+    width: 35px !important;
+}
+
+#contactNumber {
+    width: 221px !important;
+}
+
+.disable_has_learner_label {
+    color: #cccccc;
+}
+
+.disable_add_learner {
+    font-size: 13px;
+    padding-left: 280px;
+    height: 13px;
+    margin-top: 6px;
+    color: #6a6a6a;
+}
+
+.product-row-main .product_element {
+    display: inline-block;
+}
+
+.product-row-main .product_element, #productFieldset .form_field_set > input + input
+{
+    margin-left: 5px;
+}
+
+#product_list .product-row-main .product_element label {
+    width: auto;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+#product_list fieldset #selected-products .exam_inclusion_text {
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 5px;
+    width: 91%;
+    font-family: Roboto;
+}
+#product_list fieldset #selected-products .exam_inclusion_text > .inclusion_text {
+    margin-right: 5px;
+    color: #81868A;
+}
+#product_list fieldset #selected-products .exam_inclusion_text > .exams_list {
+    color: #484F57;
+}
+
+#product-row-main .exam_inclusion_text {
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 94%;
+    font-family: Roboto;
+}
+#product-row-main .exam_inclusion_text > .inclusion_text {
+    margin-right: 5px;
+    color: #81868A;
+}
+#product-row-main .exam_inclusion_text > .exams_list {
+    color: #484F57;
+}
+
+
+#get-payment-block {
+    position: fixed;
+    background: rgba(238, 238, 238, 0.8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.backend-payment-form {
+    position: relative;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 2px #ccc;
+}
+
+.close_btn {
+    position: absolute;
+    top: -7px;
+    right: 2px;
+    font-size: 35px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+#get-payment-block .form_field_set {
+    padding: 10px;
+}
+
+#get-payment-block label {
+    padding-right: 20px;
+}
+
+.upload-btn {
+    text-align: center;
+}
+
+.upload-btn input {
+    width: 150px;
+    padding: 5px;
+}
+
+.loading-overlay {
+    background: #e9e9e9;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+}
+
+.loading-overlay img {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+#approve-payment-dialog {
+    position: fixed;
+    background: rgba(238, 238, 238, 0.8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.confirmation-popup {
+    position: relative;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 2px #ccc;
+}
+
+.confirmation-popup .button-group input {
+    padding: 10px 19px;
+    margin: 0px 10px
+}
+
+
+/*cost page simplex
+*/
+
+.disabled {
+    background-color: transparent;
+    border: none !important;
+    width: 210px;
+}
+
+.disabledPtxt {
+    background-color: transparent;
+    border: none !important;
+    font-size: 17px;
+    text-decoration: underline;
+    width: 1000px;
+}
+
+.costTable {
+    display: inline-block !important;
+    overflow: auto;
+    width: 100%;
+}
+
+.company-page-tabs {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 56px;
+}
+
+.company-page-tabs {
+    overflow: hidden;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0px;
+}
+
+.company-page-tabs ul {
+    display: table;
+    width: 100%;
+}
+
+.company-page-tabs ul li {
+    display: table-cell;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #fff;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.company-page-tabs ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #545c60;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.company-option-tabs ul li.active a {
+    color: #fff;
+}
+
+.company-page-tabs ul li.active {
+    background: #5bbbd3;
+}
+
+.company-page-tabs ul li:first-child a {
+    margin-left: 20px;
+    background-position: 232px -8px;
+}
+
+.company-page-tabs ul li:first-child a.active {
+    background: #5bbbd3;
+}
+
+.company-page-tabber-hide {
+    display: none;
+}
+
+#fieldset-companydetails {
+    border: 0;
+}
+
+#fieldset-companydetails legend {
+    display: none;
+}
+
+.hide-form-el {
+    display: none;
+}
+
+.readonly_input {
+    background: #f5f5f5;
+    color: #7c7c7c;
+    border: 1px solid #ddd9d9;
+    cursor: not-allowed;
+}
+
+div[id$='_product_list-label'] label {
+    width: 500px !important;
+    font-weight: bold;
+    color: green;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+select[id$='-final_product_list'] {
+    margin-bottom: 20px !important;
+}
+
+.company-pricing-level-hide {
+    display: none;
+}
+
+.editCompanyPricingCourse div[id$='country_id-label'],
+.editCompanyPricingCourse div[id$='cluster_id-label'] {
+    display: inline-block;
+    float: left;
+}
+
+.companyPricingCourse fieldset:before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background: #999;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    margin-top: 82px;
+}
+
+.companyPricingCourse fieldset#fieldset-new:before {
+    display: none;
+}
+
+.blur_dropdown {
+    filter: blur(1px);
+}
+
+
+/* newly added css */
+
+.next_tab {
+    background-color: #439143;
+    border-color: #439143;
+}
+
+dd#NextTab-element {
+    margin-top: -63px;
+    margin-left: 52%;
+}
+
+#fieldset-1 {
+    width: 88%;
+}
+
+#CompanyCategoryPricing fieldset {
+    width: 88%;
+    margin-bottom: 45px;
+}
+
+#CancelPricing {
+    margin-top: -65px;
+    margin-left: 22%;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+#companyPricingCourse-1-linkable_type-label {
+    display: none;
+}
+
+#CompanyCategoryPricing fieldset:after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background: #999;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    margin-top: 20px;
+}
+
+#CompanyCategoryPricing ul li.subform:last-child fieldset:after {
+    display: none;
+}
+
+#paymentDocs {
+    text-align: right;
+    float: right;
+}
+
+.zest-money-hd-cls {
+    display: none !important;
+}
+
+#CourseFaq #aboutCourse fieldset ul li:nth-child(6) div {
+    display: inline-block;
+}
+
+#CourseFaq .zend_form #Save-element {
+    display: inline-block;
+    width: auto;
+}
+
+#CourseFaq .zend_form #Cancel-element {
+    display: inline-block;
+    width: auto;
+    margin-left: 20px;
+}
+
+#CourseFaq .zend_form #Cancel-label {
+    width: 0px;
+}
+
+#ExamCertification .zend_form #genericCourseFaq ul li:nth-child(3) fieldset ul li:nth-child(6) div {
+    display: inline-block;
+}
+
+#ExamCertification .zend_form #Cancel-label {
+    display: none;
+}
+
+#ExamCertification .zend_form #Save-element {
+    width: auto;
+    margin-right: 20px;
+}
+
+#aboutBundle .zend_form #genericCourseFaq ul li:nth-child(2) fieldset ul li:nth-child(1) div {
+    width: 78px;
+}
+
+#aboutBundle .zend_form #genericCourseFaq ul li:nth-child(2) fieldset ul li:nth-child(1) div {
+    width: 78px;
+}
+
+#aboutBundle .zend_form #Save-element {
+    float: left;
+    display: inline-block;
+    width: auto;
+}
+
+#aboutBundle .zend_form #Cancel-label {
+    width: 34px;
+}
+
+#aboutBundle .zend_form #Cancel-element {
+    float: left;
+    display: inline-block;
+    width: auto;
+}
+
+#aboutBundle .zend_form #aboutBundle ul li:nth-child(2) fieldset ul li:nth-child(2) div #aboutBundle-new-question {
+    width: 662px;
+}
+
+#InclusionTemplatesForm #imp_inclusions-element #inclusionSelected tbody tr td:nth-child(3) span {
+    width: 89%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+    border: none;
+}
+
+#ExamCertification .zend_form #examCirtification ul li div {
+    display: inline-block;
+}
+
+.crud-add-update #imp_inclusions-label+div+#imp_inclusions-element table tbody tr td:nth-child(2) span {
+    width: 92%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.crud-add-update #imp_inclusions-element table tbody tr:last-child td:nth-child(2) {
+    border-bottom: 1px solid #ccc;
+}
+
+.crud-add-update #imp_inclusions-label+div+#imp_inclusions-element table tbody tr:last-child td:nth-child(2) {
+    border-bottom: 1px solid #ccc;
+}
+
+.pagination {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    float: right;
+    position: relative;
+    left: 0px;
+}
+
+.crud-add-update #imp_inclusions-label+div+#imp_inclusions-element table tbody tr td:nth-child(2) span {
+    width: 92%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.crud-add-update #imp_inclusions-label+#imp_inclusions-element table tbody tr:last-child td:nth-child(2) {
+    border-bottom: 1px solid #ccc;
+    height: 35px;
+}
+
+.addCountryClusterNote {
+    color: #cccccc;
+    font-size: 15px;
+}
+
+.addCountryClusterNote {
+    padding: 5px 0;
+    clear: both;
+}
+
+#CourseFaq .zend_form #aboutCourse fieldset ul li:nth-child(1) #aboutCourse-new-all_country-label {
+    width: 104px;
+}
+
+#CourseFaq .zend_form #aboutCourse fieldset ul li:nth-child(5) div {
+    width: 90px;
+}
+
+#ExamCertification .zend_form #examCirtification fieldset ul li:nth-child(1) #examCirtification-new-all_country-label {
+    width: 104px;
+}
+
+#ExamCertification .zend_form #examCirtification fieldset ul li:nth-child(5) {
+    width: 90px;
+}
+
+#ExamCertification .zend_form #genericCourseFaq fieldset ul li:nth-child(1) #genericCourseFaq-new-all_country-label {
+    width: 104px;
+}
+
+#ExamCertification .zend_form #genericCourseFaq fieldset ul li:nth-child(5) {
+    width: 90px;
+}
+
+#ExamCertification .zend_form #genericCourseFaq ul li div {
+    display: inline-block;
+}
+
+#InclusionTemplatesForm span.pager input[type="text"] {
+    border: 1px solid #EBEBEB;
+    background-color: #F5F5F5;
+    color: #0072bc;
+    font-weight: normal;
+    min-height: 20px;
+    text-align: center;
+    padding-left: 0;
+    width: 40px !important;
+    border-radius: 0;
+}
+
+.crud-add-update #imp_inclusions-element .abt-course-bundle tbody tr td:nth-child(2) span {
+    width: 92%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+#BundleFaq .zend_form #aboutBundle fieldset ul li #aboutBundle-new-question-label {
+    margin-left: -33px;
+}
+
+#BundleFaq .zend_form #aboutBundle fieldset ul li:nth-child(4) #aboutBundle-new-all_country-label label {
+    margin-top: -8px;
+}
+
+#Bundles #Save-element {
+    width: 6%;
+}
+
+#Bundles #Save-label {
+    width: 7%;
+}
+
+#Bundles #Cancel-label {
+    width: 0;
+    margin-left: 15px;
+}
+
+#BundleFaq #Save-element {
+    width: 6%;
+}
+
+#BundleFaq #Save-label {
+    width: 7%;
+    margin-left: 180px;
+}
+
+#BundleFaq #Cancel-label {
+    width: 0;
+    margin-left: 15px;
+}
+
+#BundleFaq .zend_form .course-faq-editor li.subform fieldset li:nth-child(1) div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#Bundles .zend_form .course-faq-editor li.subform fieldset li:nth-child(1) div {
+    width: 102px;
+}
+
+#BundleFaq .course-faq-editor li.subform fieldset li:nth-child(4) div label {
+    width: 104px;
+}
+
+#Bundles .zend_form #bundleFaq ul li div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#BundleFaq .zend_form .course-faq-editor li.subform fieldset li:nth-child(1) div {
+    width: 103px;
+}
+
+#BundleFaq .zend_form #aboutBundle fieldset ul li #aboutBundle-new-question-label {
+    padding-left: 31px;
+    width: 90px;
+}
+
+#Bundles .zend_form .course-faq-editor li.subform fieldset li:nth-child(5) div {
+    width: 90px;
+}
+
+
+/* Working Basic Page */
+
+#EditCourse select,
+#courses select {
+    width: 330px !important;
+}
+
+#EditCourse textarea {
+    width: 330px;
+}
+
+#Bundles select,
+form#Bundles textarea {
+    width: 508px !important;
+}
+
+#Bundles .selectAll {
+    width: 200px !important;
+    margin-right: 5px;
+}
+
+#Bundles .trainingId {
+    width: 155px !important;
+}
+
+#Bundles .currency {
+    width: 155px !important;
+}
+
+#Bundles .location {
+    width: 155px !important;
+}
+
+#Bundles .cluster {
+    width: 155px !important;
+}
+
+#Bundles .country {
+    width: 155px !important;
+}
+
+#Bundles .zend_form #bundleFaq fieldset ul li:nth-child(2) div select {
+    width: 600px !important;
+}
+
+#Bundles .zend_form #bundleFaq fieldset ul li:nth-child(3) div select {
+    width: 600px !important;
+}
+
+#newSectionTemplateDialog ul li:nth-child(2) input {
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+#newSectionTemplateDialog ul li:nth-child(3) select {
+    margin-top: 12px;
+    margin-left: 56px;
+}
+
+span.metaDescription-span {
+    display: inline-block;
+    width: 100%;
+    margin-left: 190px;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+#practicetests .errors {
+    padding-left: 190px;
+}
+
+form#EditCourse select#courseToolsFeature,
+form#courses select#courseToolsFeature {
+    width: 300px !important;
+}
+
+
+/* Hiring Company Css */
+
+.alt-courses .element {
+    padding-left: 32px;
+}
+
+#Bundles .hide {
+    display: none;
+}
+
+.additinal form li label {
+    width: 220px;
+}
+
+.additinal form li label {
+    width: 220px;
+}
+
+.additinal form ul li:last-child {
+    margin-left: 225px;
+}
+
+.additinal form ul li .faqDescription {
+    margin-left: 220px;
+}
+
+.additinal form ul li:last-child {
+    margin-top: 10px;
+    position: inherit;
+    left: 61px;
+    width: auto;
+}
+
+
+/* .additinal form ul li .faqDescription{
+    margin-left: 220px;
+} */
+
+.additinal li select {
+    width: 510px !important;
+}
+
+.additinal form dl.zend_form dt {
+    width: 23%;
+}
+
+.additinal form dl.zend_form dd {
+    width: 74%;
+}
+
+.additinal form ul li .remove {
+    display: inline-block;
+    position: relative;
+    top: -48px;
+    left: 743px;
+}
+
+#CourseMoreDetail .addToolsNote {
+    margin-top: 61px;
+}
+
+
+/* .additinal form ul li .btn-warning:nth-child(1){
+    margin-top: 24px;
+} */
+
+.additinal .btn-info {
+    margin-top: 49px;
+    margin-left: 6px;
+}
+
+
+/* .additinal li.subform fieldset li:first-child{
+    margin-bottom: 46px;
+} */
+
+.additinal form#CourseMoreDetail .skills li.subform fieldset li:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    max-width: 820px;
+}
+
+.additinal form ul li .pro-btn-remove {
+    position: relative;
+    top: -260px;
+    /* margin-top: -196px; */
+    display: block;
+}
+
+.additinal .last-btn {
+    margin-top: -26px!important;
+}
+
+.additinal form ul li .faqDescription {
+    height: 108px;
+}
+
+.contentCourse-new-jobdesignation-__template__-hiring_companies_sortable_list {
+    float: none !important;
+}
+
+
+/* Working Css Part */
+
+form#courseBenefits dl.zend_form dt {
+    width: 24%;
+    margin-top: 40px;
+}
+
+form#courseBenefits dl.zend_form #Save-label {
+    width: 21%;
+}
+
+form#courseBenefits dl.zend_form dd {
+    width: 0;
+}
+
+form#courseBenefits dl.zend_form #Cancel-label {
+    width: 10%;
+}
+
+form#courseBenefits .errors {
+    text-align: right;
+}
+
+.job-designation-container .errors {
+    text-align: right;
+}
+
+
+/* Hiring Company Css */
+
+form#HiringCompanies dl.zend_form dd select {
+    width: 508px;
+}
+
+.additinal li.subform fieldset ul.errors {
+    /* position: relative; */
+    top: -4px;
+    left: 159px;
+    margin-left: 220px;
+}
+
+.additinal .btn-warning {
+    margin-left: 224px;
+}
+
+.additinal #fieldset-new:first-child {
+    margin-bottom: 48px;
+}
+
+
+/* courseLinkBlock Css */
+
+#courseLinkBlock {
+    width: 800px;
+}
+
+form#courseLinkBlock dl.zend_form dt {
+    width: 0;
+}
+
+form#courseLinkBlock dl.zend_form dd {
+    width: 10%
+}
+
+.h2-preview {
+    float: right;
+    margin-right: 70px;
+}
+
+.crud-add-update form ul.ui-sortable li {
+    padding-right: 24px!important;
+}
+
+#Bundles .hide {
+    display: none;
+}
+
+form#Bundles .ui-sortable {
+    float: left!important;
+}
+/* Enterprice */
+
+.enterprice {
+    padding-left: 50px;
+}
+
+form#CoursesEnterprise dl.zend_form #Save-label {
+    width: 24%;
+}
+
+form#CoursesEnterprise dl.zend_form dd {
+    margin-top: 32px;
+}
+
+
+/* Basic Page UI Start */
+
+#EditCourse,
+#courses {
+    width: 90%!important;
+}
+
+.form_fields_group_wrapper {
+    border: none;
+}
+
+.form_fields_group_wrapper legend {
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-inline-start: 0px;
+    font-weight: 600;
+}
+
+form#EditCourse div.element label,
+form#courses div.element label {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+#EditCourse select,
+#EditCourse textarea,
+#courses select,
+#courses textarea {
+    width: 508px!important;
+}
+
+form#EditCourse ul li .element {
+    display: inline-block;
+    /*    padding-left: 225px;*/
+}
+
+form#EditCourse .description-note,
+form#courses .description-note {
+    font-size: 14px;
+    /*    padding-left: 224px;*/
+    margin-top: 10px;
+}
+
+form#Bundles .description-note{
+    font-size: 14px;
+    /*    padding-left: 224px;*/
+    margin-top: 10px;  
+}
+form#Bundles ul li .element {
+    display: inline-block;
+}
+form#Bundles .description{
+    margin-bottom:10px;
+}
+
+
+form#EditCourse .description,
+form#courses .description {
+    margin-bottom: 10px;
+}
+
+form#EditCourse .description-note {
+    display: block;
+}
+
+form#EditCourse li input[type="text"],
+form#courses li input[type="text"] {
+    width: 498px;
+}
+
+form#EditCourse .ui-sortable,
+form#courses .ui-sortable {
+    width: 210px!important;
+    padding: 0 30px 10px!important;
+    float: left!important;
+}
+
+form#EditCourse li.subform fieldset#fieldset-trainingTypes ul li div {
+    float: none;
+}
+
+form#EditCourse select#courseToolsFeature,
+form#courses select#courseToolsFeature {
+    width: 502px !important;
+}
+
+form#EditCourse input[type="radio" i] {
+    position: relative;
+    top: 1px;
+    margin-right: 10px;
+}
+
+form#EditCourse li.subform fieldset#fieldset-trainingTypes legend,
+form#courses li.subform fieldset#fieldset-trainingTypes legend {
+    width: 225px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+
+/* form#EditCourse .form_fields_group_wrapper:last-child{
+    margin-top:28px;
+}
+*/
+
+form#EditCourse ul li.buttons div.submit-element,
+form#courses ul li.buttons div.submit-element {
+    margin-left: 242px;
+}
+
+form#EditCourse .training-types-subform-courses {
+    margin-top: 28px;
+}
+
+form#courses li.subform fieldset#fieldset-trainingTypes ul li div .optional {
+    margin-right: 40px;
+}
+
+form#courses ul li.subform fieldset#fieldset-trainingTypes ul li {
+    padding-left: 30px;
+    margin-top: 0;
+}
+
+form#courses ul li .createNewLink {
+    clear: both;
+    display: block;
+    margin: 18px 0 18px 224px;
+}
+
+form#courses ul li .element {
+    display: inline-block;
+}
+
+form#courses li.subform fieldset#fieldset-trainingTypes ul li div label,
+form#EditCourse li.subform fieldset#fieldset-trainingTypes ul li div label {
+    margin-right: 32px;
+}
+
+form#EditCourse ul li.subform fieldset#fieldset-trainingTypes ul li,
+form#courses ul li.subform fieldset#fieldset-trainingTypes ul li {
+    display: inline-block;
+}
+
+form#courses li label {
+    width: 222px;
+}
+
+#courses dt#flexi_card_contents-label+dd,
+#EditCourse dt#flexi_card_contents-label+dd {
+    width: calc(100% - 237px);
+    display: inline-block;
+    vertical-align: top;
+}
+
+#courses dt#osl_contents-label,
+dt#flexi_card_contents-label,
+#EditCourse dt#osl_contents-label,
+dt#flexi_card_contents-label {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+form#courses li.subform fieldset#fieldset-trainingTypes ul li div .optional,
+form#courses li.subform fieldset#fieldset-trainingTypes ul li div .optional {
+    width: 100%;
+}
+
+form#courses li.subform fieldset#fieldset-trainingTypes ul li div label {
+    margin-right: 32px;
+    width: 56px;
+}
+
+form#EditCourse ul li.subform fieldset#fieldset-trainingTypes ul li {
+    display: inline-block;
+    width: auto;
+    padding: 0 10px;
+}
+
+form#EditCourse li.subform fieldset#fieldset-trainingTypes ul li div {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    clear: both;
+    float: none;
+}
+
+form#EditCourse li.subform fieldset#fieldset-trainingTypes ul li div {
+    padding-left: 10px;
+}
+
+#EditCourse .errors,
+form#courses .errors {
+    margin-left: 225px;
+}
+
+
+/* Basic Page UI End */
+
+
+/* Basic Page New Changes*/
+
+.form_fields_group_wrapper {
+    margin-top: 30px;
+}
+
+form#CourseMoreDetail ul li .remove {
+    position: relative;
+    top: -48px;
+    left: 512px;
+}
+
+form#CourseMoreDetail .btn-warning {
+    position: relative;
+    top: -40px;
+    margin-left: 0;
+}
+
+form#CourseMoreDetail .addToolsNote {
+    margin-top: 30px;
+}
+
+form#CourseMoreDetail .btn-info {
+    margin-top: 6px;
+}
+
+form#CourseMoreDetail ul li .remove {
+    position: relative;
+    top: -48px;
+}
+
+form#CourseMoreDetail ul li .pro-btn-remove {
+    position: relative;
+    top: -78px;
+}
+
+form#CourseMoreDetail #fieldset-new legend {
+    font-weight: 700;
+}
+
+form#CourseMoreDetail #eligibility-label label,
+form#CourseMoreDetail #Prerequisites-label label,
+form#CourseMoreDetail #batchbenefits-label label {
+    color: #545c60!important;
+    font-weight: bold;
+}
+
+form#CourseMoreDetail #eligibility_id-element,
+form#CourseMoreDetail #prerequisites_id-element,
+form#EditCourse #fieldset-mappings_group {
+    margin-bottom: 30px;
+}
+
+form#CourseMoreDetail .cke_chrome,
+form#CourseMoreDetail #osl_defalut_text-label {
+    margin-top: 10px;
+}
+.tooltip {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    color: #FFFFFF;
+    padding: 6px 8px;
+    box-shadow: 0 0 1px;
+    border-radius: 4px;
+    z-index: 1;
+    font-size: 12px;
+    line-height: 18px;
+    transition: opacity .1s ease-in;
+}
+.tooltip > .arrow {
+    position: absolute;
+    z-index: 2;
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -5px;
+    right: 0;
+    margin-right: -5px;
+}
+.tooltip,
+.tooltip > .arrow {
+    background-color: #2A2F32;
+}
+
+form#EditCourse dt#osl_contents-label+dd:nth-child(4) {
+    margin-bottom: 10px;
+}
+
+form#EditCourse .error-file,
+form#courses .error-file {
+    margin-left: 0;
+}
+
+
+/* Basic Page New Changes End*/
+
+
+/*  */
+
+form#Bundles li #certificate_alt_text,
+form#Bundles li #certificate_image {
+    width: 512px;
+}
+
+
+/* FAQ Additional Content Start*/
+
+.label-addition-content .new-course-inclusion-tabs {
+    margin-right: 50px;
+}
+
+.label-addition-content .new-course-inclusion-tabs ul {
+    width: 150px;
+}
+
+.label-addition-content table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.label-addition-content .inclusion-tabs-inner ul li {
+    padding-left: 10px;
+}
+
+
+/* Safari UI Issue */
+
+form#CompanyPricing div[id$='_product_list-label'] label {
+    width: 700px !important;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+form#CompanyPricing #companyPricingCourse-new-final_product_list-label {
+    margin-bottom: 10px;
+}
+
+form#CompanyPricing .remove-all-selected-course {
+    display: inline-block;
+    font-weight: 400!important;
+}
+
+form#CompanyPricing .remove-all-selected-course span {
+    position: absolute;
+    top: 42px!important;
+    left: 230px;
+    font-weight: 400!important;
+}
+
+
+/* Safari UI Issue */
+
+form#FptFaqsForm .ui-menu-item a {
+    background: #eee!important;
+}
+
+.ui-menu-item a {
+    background: #eee!important;
+}
+
+.ui-menu .ui-menu-item a {
+    background: #eee!important;
+}
+
+.ui-menu .ui-menu-item {
+    background: #eee!important;
+ }
+ .crud-add-update #CoursesMobileContent #rect_image-label{
+     width:465px;
+     display:inline-block;
+ }
+ .crud-add-update #CoursesMobileContent #rect_image-label label{
+     width:100%;
+ }
+ .crud-add-update #CoursesMobileContent #rect_image-label+.element{
+     width:190px;
+     display:inline-block;
+     position: relative;
+     top: -8px;
+ }
+ 
+ .crud-add-update #CoursesMobileContent #square_image-label{
+     width:465px;
+     display:inline-block;
+     margin-top:20px;
+ }
+ .crud-add-update #CoursesMobileContent #square_image-label label{
+     width:100%;
+ }
+ .crud-add-update #CoursesMobileContent #square_image-label+dd{
+     width:190px;
+     display:inline-block;
+     position: relative;
+     top:0px;
+     padding-left:5px;
+     margin-top:20px;
+ }
+ .crud-add-update #CoursesMobileContent dt#Save-label{
+     display:none;
+ }
+ .crud-add-update #CoursesMobileContent #Save-element{
+     clear:both;
+     margin-top:25px;
+ }
+
+.token-input-list-facebook {
+    display: inline-block;
+}
+
+.crud-add-update form ul li {
+    width: 97%;
+}
+
+.token-input-delete-token-facebook {
+    float: right !important;
+}
+
+.border-red{
+     border: 1px solid red!important;
+}
+
+.pp-li-check{
+    width: 60%!important
+}
+ .pp-li:nth-child(2n){
+    width: 50%!important;
+ }
+ .crud-add-update form#MobileApp .ui-sortable li{
+     width:228px;
+ }
+  .crud-add-update form#MobileApp fieldset{
+    padding-left:0;
+    margin-left:0;
+ }
+
+ .crud-add-update form#MobileApp  .banner_items_temp_sortable_list > li,.crud-add-update form#MobileApp .widget_items_temp_sortable_list li{
+    width:965px!important;
+}
+
+ .crud-add-update #LabelMobileContent #rect_image-label{
+     width:465px;
+     display:inline-block;
+ }
+ .crud-add-update #LabelMobileContent #rect_image-label label{
+     width:100%;
+ }
+ .crud-add-update #LabelMobileContent #rect_image-label+.element{
+     width:190px;
+     display:inline-block;
+     position: relative;
+     top: -8px;
+ }
+ 
+ .crud-add-update #LabelMobileContent #square_image-label{
+     width:465px;
+     display:inline-block;
+     margin-top:20px;
+ }
+ .crud-add-update #LabelMobileContent #square_image-label label{
+     width:100%;
+ }
+ .crud-add-update #LabelMobileContent #square_image-label+dd{
+     width:190px;
+     display:inline-block;
+     position: relative;
+     top:0px;
+     padding-left:5px;
+     margin-top:20px;
+ }
+ .crud-add-update #LabelMobileContent dt#Save-label{
+     display:none;
+ }
+ .crud-add-update #LabelMobileContent #Save-element{
+     clear:both;
+     margin-top:25px;
+ }
+ .crud-add-update #LabelMobileContent dl.zend_form #square_value-element{
+     width:62%;
+ }
+
+ /* Exam & Certificate ui */
+.crud-add-update #courseContent{
+    width: 878px;
+}
+
+.crud-add-update #contentCourse-new-isProplus-label label{
+    width: 264px;     
+}
+
+#MobileApp  p.description{
+    font-size:12px;
+    margin-top:2px;
+}
+
+.backend-wrap table th{
+    word-break: break-word;
+}
+ 
+#courseContent ul li:first-child+li div{
+    display: block;
+}
+
+#courseContent .examPassText{
+    padding-left: 188px;
+}
+
+#skills-new-sectionId-label{
+    display: none;
+}
+.benefits-city form#courseBenefits .job-designation-container .remove{
+    position: absolute;
+    margin-left: -35px;
+    margin-top: -36px;
+    left: unset;
+}
+
+.benefits-city form#courseBenefits dl.zend_form dt#remove-label{ margin-top:0px;}
+.benefits-city form#courseBenefits dl.zend_form dt#add-label{
+    width: 65%;
+    margin: 0 auto;
+ }
+
+
+
+/* City Page UI Part */
+
+
+.city-info{
+        margin: 20px 0 20px; 
+}
+
+.city-info table tbody tr td:last-child {
+    width: 150px;
+    margin:20px 0 20px;
+}
+
+.city-eligibility{
+    margin-bottom: 20px;
+}
+.city-eligibility table tbody tr td:last-child{
+    width: 150px;
+}
+
+.city-pre-requisite table tbody tr td:last-child{
+    width: 150px;
+    margin:20px 0 20px; 
+}
+
+.city-pro-intro table tbody tr td:last-child{
+    width: 150px;
+   
+}
+
+.city-pro-intro{
+    margin-top: 10px;
+}
+
+
+#skills-new-sectionId-label{
+    display: none;
+}
+form#courseBenefits {
+    width: 910px;
+}
+
+
+/* Producation UI Issue */
+
+.job-designation-container .hide {
+    display: none;
+}
+
+label.designation-label {
+    min-width: 210px;
+}
+
+.benefits-city .job-designation-container ul li div{
+    margin-top: 0;
+}
+
+.benefits-city #contentCourse-new-course_faq_id-label{
+    margin-top: 40px;
+}
+
+.benefits-city #contentCourse-new-course_faq_id-label label{
+    font-size: 20px;
+    font-weight: 500;
+}
+ #courseContent ul li:first-child+li div{
+    display: inline-block;
+ }
+
+#footer_link .error-border{
+    border: 1px solid red;
+}
+
+#footer_link #footerTable th{ text-align: center }
+/* Bundle Id UI Issue Fix */
+
+#Bundles li.courseTool ul li fieldset ul li div{
+    height: 0;
+}
+
+#Bundles li.courseTool ul li ul li label{
+    margin-right: 46px;
+    vertical-align: middle;
+}
+
+#Bundles li.accessDays ul,#Bundles li.courseTool ul{
+    left: 0px;
+}
+
+#Bundles li.accessDays ul li ul li label{
+    margin-right: 85px;
+}
+
+#Bundles li.countryPrice ul li fieldset ul li{
+    width: 31%;
+}
+
+form#Bundles li.countryPrice ul li fieldset ul li:last-child{
+    left: 216px;
+    top: 22px;
+}
+
+#Bundles select.courseTool{
+         margin-left:97px;
+}
+
+li.courseTool ul li ul li div.element button.remove{
+    position: absolute;
+    top: -46px;
+    right: -17px;
+}
+
+li.courseTool ul li:last-child{
+    left: 161px;
+}
+#Bundles li.countryPrice ul{
+    left:95px;
+}
+#Bundles li.examFaq ul{
+    left:0;
+}
+#Bundles li.examFaq ul li ul li label{
+    width:190px;
+    text-transform:capitalize;
+}
+#Bundles li.examFaq ul li ul li div.element input[type="text"].question,#Bundles li.examFaq ul li ul li div.element input[type="text"]{
+    width:512px;
+}
+#Bundles li.examFaq ul li fieldset ul li div{
+    height:auto; 
+}
+#Bundles li.examFaq ul li ul li div.element button.remove{
+    top:0;
+    left:190px;
+}
+#Bundles li.examFaq .btn-warning{
+    margin-left:115px;
+    margin-top:20px;
+}
+#Bundles li.countryPrice ul li ul li div.element button.remove{
+    top:-50px;
+    right:-20px;
+    float: right;
+}
+#Bundles li.courseTool ul li ul li div.element button.remove{
+    top:-115px;
+}
+#Bundles li.countryPrice ul li fieldset ul li.pp-li-check div{
+    display:inline-block;
+    vertical-align:middle;
+}
+#Bundles li.countryPrice ul li fieldset ul li.pp-li-check{
+    /* width: 31% !important;
+    position: relative;
+    top: 24px;
+    left: 12px; */
+    margin-right: 70px;
+}
+#Bundles li.countryPrice ul li fieldset ul li.pp-li-check div input{
+    margin-top:6px; 
+}
+#Bundles .countryPrice .btn-warning{
+    margin-left:16px;
+}
+#Bundles .courseTool .btn-warning{
+    margin-left:30px;
+}
+#Bundles li.buttons .submit-element .submit{
+    margin-left:30px;
+}
+form#Bundles li.countryPrice ul li ul li div.element input[type="text"] {
+    width: 240px;
+}
+#Bundles li.countryPrice  ul li.pp-li  div.element input[type="text"] {
+    width: 240px;
+}
+form#Bundles li.countryPrice ul{
+    width: 900px;
+}
+form#Bundles li.countryPrice .trainingId,form#Bundles li.countryPrice .location,form#Bundles li.countryPrice .currency,form#Bundles li.countryPrice .country,form#Bundles li.countryPrice .cluster{
+    width: 240px !important;
+}
+#Bundles li.countryPrice ul li fieldset ul li:nth-child(7){
+    display:none;
+}
+.crud-add-update #courseContent #contentCourse-new-question-label,.crud-add-update #courseContent #contentCourse-new-question-label+.element{
+    clear:both;
+}
+.crud-add-update #courseContent #contentCourse-new-answer-label+.element{
+    clear:both;
+}
+.crud-add-update #courseContent dl.zend_form dt#Save-label{
+    display:none;
+}
+.crud-add-update #courseContent dl.zend_form dt#Cancel-label{
+    display:none;
+}
+.crud-add-update #courseContent dl.zend_form dd#Save-element{
+    display:inline-block;
+    width:100px;
+}
+.crud-add-update #courseContent #contentCourse-new-is_b2c-label label{
+    
+}
+.crud-add-update #courseContent #contentCourse-new-is_b2c-label+.element{
+    display: inline-block;
+    vertical-align: middle;
+}
+.crud-add-update form#courseBenefits #contentCourse .job-designation-container label{
+    min-width: 132px;
+    display:inline-block;
+    width:auto;
+}
+/*.crud-add-update form#courseBenefits #contentCourse #contentCourse-new-jobdesignation-new-designation{
+    width:98px;
+}*/
+.crud-add-update form#courseBenefits #contentCourse li.job-designation-container li.subform fieldset input[type="text"]{
+    width:102px;
+}
+.crud-add-update #courseBenefits button.get-salary{
+      padding: 3px 5px;  
+}
+.crud-add-update #courseBenefits .job-designation-container li.subform fieldset{
+    width:100%;
+}
+.crud-add-update #courseBenefits .job-designation-container li.subform fieldset ul div:nth-child(6) div{
+    display:block;
+    clear:both;
+}
+.crud-add-update form#courseBenefits dl.zend_form dt#remove-label{
+    width:100%;
+    clear:both;
+}
+.crud-add-update form#courseBenefits dl.zend_form #remove-element{
+    width: 100% !important;
+    clear:both;
+}
+.crud-add-update form#courseBenefits dl.zend_form #remove-element .remove{
+    position: relative;
+    left: 0;
+    margin-top: -56px;
+}
+.crud-add-update #courseBenefits #contentCourse-new-jobdesignation-new-hiring_companies-label+.element{
+    clear:both;
+    width:100%;
+}
+.crud-add-update #courseBenefits .job-designation-container dt#add-label{
+    width:13px;
+}
+.crud-add-update #courseBenefits .job-designation-container dd#add-element{
+    position:relative;
+    left:-13px;
+    
+}
+.crud-add-update form#courseBenefits dl.zend_form  #Save-label{
+    display:none;
+}
+.crud-add-update form#Groups li.keyFeatures ul{
+    left:94px;
+}
+.crud-add-update form#Groups li.keyFeatures ul li div{
+    height:auto;
+}
+.crud-add-update form#Groups li.keyFeatures ul li button.remove{
+    top:0;
+    margin-bottom:10px;
+}
+
+.crud-add-update form#Groups li.examFaq ul{
+    left:94px;
+}
+.crud-add-update form#Groups li.examFaq ul li div{
+    height:auto;
+}
+.crud-add-update form#Groups li.examFaq ul li button.remove{
+    top:0;
+    margin-bottom:10px;
+}
+
+.crud-add-update form#Groups li.recommendations ul{
+    left:94px;
+}
+.crud-add-update form#Groups li.recommendations ul li div{
+    height:auto;
+}
+.crud-add-update form#Groups li.recommendations ul li button.remove{
+    top:0;
+    margin-bottom:10px;
+}
+.crud-add-update form#Groups .btn-warning{
+    margin-left:15px;
+}
+.crud-add-update form#Groups ul li.buttons div.submit-element{
+    margin-left: 190px;
+}
+.crud-add-update form#EntityListing dl.zend_form dd#url-element{
+    min-height: 50px;
+}
+.crud-add-update form#Exams li.countryPrice ul{
+    left:94px;
+}
+.crud-add-update form#Exams li.countryPrice ul fieldset ul{
+    width:702px;
+}
+.crud-add-update form#Exams li.countryPrice ul fieldset ul li select{
+    width:100% !important;
+}
+.crud-add-update form#Exams li.countryPrice ul li ul li div.element button.remove{
+    top: 22px;
+}
+.crud-add-update form#Exams li.countryPrice .btn-warning{
+    margin-left:16px;
+}
+.crud-add-update form#Exams li.examFaq ul{
+    left:94px;
+}
+.crud-add-update form#Exams li.examFaq ul li fieldset ul li div{
+    height:auto;
+}
+.crud-add-update form#Exams li.examFaq ul li ul li div.element button.remove{
+ top:0;   
+}
+.crud-add-update form#Exams #examFaq-add{
+    margin-left:16px;
+}
+
+.crud-add-update form#Exams li.recommendations ul{
+    left:94px;
+}
+.crud-add-update form#Exams li.recommendations ul li fieldset ul li div{
+    height:auto;
+}
+.crud-add-update form#Exams li.recommendations ul li ul li div.element button.remove{
+ top:0;   
+}
+.crud-add-update form#Exams #recommendations-add{
+    margin-left:16px;
+}
+.crud-add-update form#Exams ul li.buttons div.submit-element{
+    margin-left:190px;
+}
+.crud-add-update form#labels li.subscribePriceContainer ul{
+    left:165px;
+    padding-bottom:12px;
+    border-radius:4px;
+}
+.crud-add-update form#labels li.subscribePriceContainer ul fieldset ul{
+    left:10px;
+}
+.crud-add-update form#labels li.subscribePriceContainer ul fieldset ul li{
+    margin-left:20px;
+    margin-right:0;
+}
+.crud-add-update form#labels li.subscribePriceContainer ul fieldset ul li:first-child{
+    margin-left:0;
+}
+.crud-add-update form#labels li.subscribePriceContainer ul fieldset ul li select{
+    width:100% !important;
+}
+.crud-add-update form#labels li.subscribePriceContainer ul li:last-child{
+    left:12px;
+}
+.crud-add-update form#labels ul li.buttons div.submit-element{
+    margin-left:190px;
+}
+.crud-add-update form#labels ul li.subscribePriceContainer fieldset ul li input{
+    width:100%;
+}
+.crud-add-update form#labels ul li.subscribePriceContainer fieldset ul li{
+    max-width:17%;
+    width:auto;
+}
+/*
+    Application Bundle Start
+*/
+.form_fields_group_wrapper.internalHeading legend {
+    font-size: 16px!important;
+    font-weight: 500!important;
+}
+
+/* .form_fields_group_wrapper.internalHeading li {
+    margin: 5px 30px!important;
+} */
+
+.application-subform-name{
+    display: inline-flex !important;
+    width: 50% !important;
+    float: left !important;
+}
+.application-subform-value{
+    display: inline-flex !important;
+    float: left !important;
+    width: 22% !important;
+}
+
+form.applicationForm input[type="text"].error { border: 1px solid red; }
+form.applicationForm .appTable{ text-align: center;}
+form.applicationForm .appTableli{ padding-left: 40px; }
+form.applicationForm input[type="text"].sequence{ 
+    width: 50px;
+    float: none;
+    text-align: center; }
+
+#industry_ratio-label,#we_designation_ratio-label,#we_years_ratio-label,
+#ed_industry_ratio-label,#ed_logo_url-label { display: none!important;}
+
+input#industry_name,input#we_designation_name,input#we_years_name,
+input#ed_industry_name,input#ed_logo_name { width: 250px!important; }
+
+input#industry_ratio,input#we_designation_ratio,input#we_years_ratio,
+input#ed_industry_ratio,input#ed_logo_url { width: 150px!important; }
+
+input#app_eligibility_work_exp, input#app_eligibility_degree, input#app_eligibility_basic { width: 280px!important; }
+
+input#app_eligibility_work_exp_order, input#app_eligibility_degree_order, input#app_eligibility_basic_order { width: 55px!important; }
+
+#fieldset-app_process_group legend.addToolsNote { font-size: 20px!important; font-weight: 600!important; margin-bottom: 20px;}
+
+.applicationForm .description-note {float: left; margin-left: 190px!important;}
+
+/*
+    Application Bundle End
+*/
+#Bundles #fieldset-learning_path_group .searchBoxDom{
+    width: 200px ;
+    display:block;
+    float: none;
+} 
+#Bundles #fieldset-learning_path_group .SearchBoxPlugin{
+    /* margin-left: 190px; */
+    width: 200px !important;
+}
+#Bundles .countryPrice ul li ul li div.element button.remove{
+    position: unset;
+}
+#Bundles ul.bundle_electives_sortable {
+    font-size: 12px;
+    color: #000000;
+}
+form#Bundles li.countryPrice ul li fieldset ul li:last-child {
+    top: 0px;
+    left: 0px;
+    margin-left: 12px;
+    float: right;
+    margin-top: 12px;
+    margin-right: 20px;
+    width: 26%;
+}
+
+form#Bundles  li.accessDays ul li fieldset ul li div{
+    float: left;
+    margin-right: 10px;
+}
+form#Bundles  li.accessDays ul li fieldset ul li:last-child{
+    margin-left: 0px;
+}
+
+form#Bundles #fieldset-new #accessDays-new-accessDays-label label{
+    margin-right: 0px;
+}
+form#Bundles li.countryPrice ul{
+    position: unset;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+form#Bundles li.countryPrice li:last-child {
+    margin-left: 0px;
+}
+#Bundles .countryPrice #fieldset-new {
+    margin-bottom: 0px;
+ }
+#Bundles #fieldset-9  .accessDaysCount{
+    margin-left: 183px;
+}
+#Bundles li.accessDays ul li ul li div.element button.remove{
+    top: -20px;
+}
+#Bundles #fieldset-9 ul li label{
+    margin-left: 0px;
+    display:none;
+ }
+
+ form dl.zend_form dd select {
+    max-width: 330px;
+}
+
+ form#University dl.zend_form #fieldset-link_group{
+    display: inline;
+    border: none;
+    padding-top: 0px;
+}
+form#University dl.zend_form #fieldset-link_group legend{
+    display:none;
+}
+
+ /* Application Form Css Section Start */
+
+ form#application ul li textarea{
+    width: 500px;
+ }
+
+ form#application ul li #app_hiring_companies{
+    width: 500px!important;
+ }
+
+ form#application ul li #app_eligibility_work_exp_order, form#application ul li #app_eligibility_degree_order, form#application ul li #app_eligibility_basic_order{
+    position: relative;
+    top: -2px;
+    left: 0;
+    text-align: center;
+ }
+
+
+ form#application ul li input#app_eligibility_work_exp, form#application ul li input#app_eligibility_degree,form#application ul li input#app_eligibility_basic{
+    width: 500px!important;
+ } 
+
+ form#application ul li .errors{
+    margin-left: 190px;
+ }
+
+ form#application ul li.buttons div.submit-element{
+    margin-left: 204px;
+ }
+
+ form#application ul li.application-subform-value .errors{
+     position: relative;
+    top: 26px;
+    right: 338px;
+ }
+
+ form#application ul li.application-subform-value .errors li{
+    width: 238px;
+ }
+
+ form#application ul li.application-subform-name .errors{
+    position: relative;
+   top: 26px;
+   right: 439px;
+  
+}
+
+form#application ul li.application-subform-name .errors li{
+   width: 238px;
+}
+
+form#application #fieldset-app_eligibility_group li:nth-child(4),form#application #fieldset-app_eligibility_group li:nth-child(6),form#application #fieldset-app_eligibility_group li:nth-child(8){
+    width: 84px;
+    height: 20px;
+    position: relative;
+    top: -107px;
+    left: 724px;
+    font-size: 12px;
+}
+
+form#application #fieldset-app_eligibility_group li:nth-child(4) #app_eligibility_work_exp_order-label label,form#application #fieldset-app_eligibility_group li:nth-child(6) #app_eligibility_degree_order-label label,form#application #fieldset-app_eligibility_group li:nth-child(8) #app_eligibility_basic_order-label label{
+    font-size: 12px;
+    width: 100px;
+}
+
+form#application .description-note{
+    font-size: 14px;
+}
+
+form#application #fieldset-app_eligibility_group li:nth-child(4) .errors, form#application #fieldset-app_eligibility_group li:nth-child(6) .errors, form#application #fieldset-app_eligibility_group li:nth-child(8) .errors{
+    margin-left: 0;
+    width: 235px;
+}
+
+form#application ul li #app_hiring_companies{
+    width: 306px!important;
+    margin-left: 188px;
+    height: 130px;
+    clear: both;
+    position: relative;
+    top: -25px;
+    
+}
+
+form#application ul li  ul.bundle_hiring_companies_sortable{
+    float: left!important;
+    width: 274px!important;
+    position: relative;
+    top: -40px;
+    font-size: 14px;
+} 
+
+
+form#application #fieldset-industry_group li:last-child  ul{
+    position: relative;
+    top: -38px;
+}
+
+form#application #fieldset-industry_group li:last-child #app_hiring_companies_id-label{
+    display: none;
+}
+
+form#application #app_eligibility_work_exp_order + span,
+form#application #app_eligibility_degree_order + span,
+form#application #app_eligibility_basic_order + span{
+    margin-left: 5px;
+}
+
+form#application .option-note{
+    font-size: 12px;
+    color: green;
+}
+
+/* form#application #fieldset-learner_group legend{
+    font-weight: 500;
+    font-size: 20!important;
+} */
+
+form.applicationForm .appTableli{
+    padding-left: 0;
+}
+
+form.applicationForm .appTable{
+    text-align: left;
+}
+
+form.applicationForm  table{
+    text-align: center;
+}
+
+.applicationForm .description-note{
+    margin-left: 0!important;
+    clear: both;
+    position: relative;
+    left: 194px;
+}
+
+.applicationForm #app_industry_title_2 +.description-note,.applicationForm #app_we_title_1 + .description-note,.applicationForm #app_we_title_2 + .description-note, #app_process_submit_text + .description-note,.applicationForm #app_process_review_text + .description-note{
+    position: relative;
+    top: -25px;
+}
+
+.applicationForm .searchBoxDom,form#application ul li #app_hiring_companies{
+    width: 500px!important;
+}
+
+
+form#application ul li{
+    width: 106%;
+}
+
+form#application .form_fields_group_wrapper.internalHeading legend{
+    font-size: 18px!important;
+    /* font-weight: 500!important; */
+}
+
+form#application .form_fields_group_wrapper.internalHeading .addToolsNote{
+  font-size: 20px!important;
+}
+
+ /* Application Form Css Section End */
+
+form#University dl.zend_form dd#banner_logo-element, form#University dl.zend_form dt#logo_bw-label {
+    float: none;
+    /* width: auto; */
+}
+
+form#University  dl.zend_form dd select {
+    width: 500px;
+    max-width: 100%;
+}
+
+form#University  dl.zend_form dd#university_logo_colored-element,form#University  dl.zend_form dd#university_logo_bw-element{
+    margin-left: 325px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+}
+form#University dl.zend_form dt#logo_bw-label label{
+    width: 224px;
+    margin-right: 95px;
+}
+
+form#University dl.zend_form dt#logo_colored-label{
+    margin-right: 70px;
+    width: 251px;
+    margin-top:0px;
+}
+
+
+/* Footer Link Form UI */
+
+form#footer_link select.multiple, form#footer_link select.courseListAll,form#footer_link select.footer-resource{
+    display: block;
+    width: 508px!important;
+    margin-bottom: 20px;
+}
+
+form#footer_link select.footer-resource{
+    width: 595px!important;
+}
+
+form#footer_link .zend_form li ul li label{
+    min-width: 220px;
+}
+
+form#footer_link  ul li:first-child{
+    margin:20px 0;
+}
+
+form#footer_link .invert-all{
+    margin-left: 225px;
+}
+
+form#footer_link .btn-success{
+    margin-left: 10px;
+}
+
+form#footer_link dl.zend_form dt{
+    width: 0%;
+}
+
+
+form#footer_link dl.zend_form dd#Cancel-element{
+    margin-bottom: 24px;
+}
+
+form#footer_link #contentForm-new-resourceProduct{
+    min-width: 250px;
+}
+
+form#footer_link #contentForm-new-footerResources{
+    overflow-x: auto;
+}
+
+/* Footer Link Form UI end*/
+li#aboutBundle ul li ul li div.element input#aboutBundle-new-question[type="text"]{
+    left:26px;
+}
+form#bundleBenefits #aboutBundle .job-designation-container label{
+    min-width: 132px;
+    display: inline-block;
+    width: auto;
+}
+.crud-add-update form#bundleBenefits #aboutBundle li.job-designation-container li.subform fieldset input[type="text"] {
+    width: 102px;
+}
+.crud-add-update #bundleBenefits button.get-salary {
+    padding: 3px 5px;
+    margin-top:3px;
+}
+.crud-add-update form#bundleBenefits .job-designation-container li.subform fieldset ul div:nth-child(6) div{
+    display: block;
+    clear: both;
+}
+.crud-add-update form#bundleBenefits #contentCourse-new-jobdesignation-new-hiring_companies-label+.element{
+    clear: both;
+    width: 100%;
+}
+.crud-add-update form#bundleBenefits .job-designation-container dd#add-element{
+    display:none;
+}
+.crud-add-update form#bundleBenefits dl.zend_form #Save-label {
+    display: none;
+}
+form#bundleBenefits dl.zend_form #Cancel-label {
+    width: 10%;
+}
+form#bundleBenefits dl.zend_form dd{
+    width: 0;
+    position:relative;
+}
+form#bundleBenefits div[id$="getsalary-label"] {
+    display: none
+}
+form#bundleBenefits li#aboutBundle ul li:last-child{
+    left:0;
+}
+
+form#bundleBenefits .job-designation-container select {
+    min-height: 0px;
+}
+
+form#bundleBenefits .job-designation-container .remove {
+    position: absolute;
+    left: 198px;
+    margin-top: 14px;
+}
+
+form#bundleBenefits .job-designation-container select {
+    min-height: 100px;
+}
+
+form#bundleBenefits .job-designation-container li.subform fieldset ul.errors li {
+    width: 97px;
+}
+form#bundleBenefits li#aboutBundle ul li fieldset ul li div#aboutBundle-new-jobdesignation-new-hiring_companies-label{
+   display:block; 
+}
+
+/* Basic Page UI part is start New */
+
+form#Bundles #currentBundleName-label,form#Bundles #bundle_tmp_id-label{
+    display: none;
+}
+
+form#Bundles #label_id-label{
+    margin-top: 24px;
+}
+
+form#Bundles #primary_course_id-label,form#Bundles #university-label,form#Bundles #searchTags-label,form#Bundles #bundle_electives_temp-label{
+    margin-top: 20px;
+}
+
+form#Bundles #fieldset-bundle_detail_Group,form#Bundles #fieldset-learning_path_group,form#Bundles #fieldset-setting_group1{
+    margin-top: 0;
+}
+
+form#Bundles #fieldset-setting_group,form#Bundles #fieldset-bundle_detail_Group,form#Bundles #fieldset-learning_path_group,form#Bundles #fieldset-setting_group1,form#Bundles #fieldset-certificate_group{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+form#Bundles .form_fields_group_wrapper legend,form#Bundles .addIntroVideoNote strong{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-inline-start: 0px;
+}
+
+form#Bundles #fieldset-setting_group1{
+    height: 650px;
+}
+
+form#Bundles .errors{
+    margin-left: 192px;
+}
+
+form#Bundles #fieldset-setting_group1 li .error-file{
+    margin-left: 0;
+}
+
+form#Bundles .addIntroVideoNote{
+    margin-top: -127px;
+}
+
+form#Bundles .buttons{
+    position: relative;
+    top: -40px;
+}
+
+form#Bundles #course_advisor-label,form#Bundles #projectTitleSectionIdOverview-label,form#Bundles #projectTitleSectionIdDetails-label,form#Bundles #course_advisor-label,form#Bundles #course_advisor_err-label,form#Bundles #categoryLabelName-label,form#Bundles #oldCategoryLabelID-label,form#Bundles #oldCategoryLabelID-label,form#Bundles #bundle_elec_md5-label,form#Bundles #bundle_electives_keys-label,form#Bundles #bundle_electives-label,form#Bundles #bundle_electives-label,form#Bundles #banner_image_old-label,form#Bundles #tumbnail_image_old-label,form#Bundles #home_page_tumbnail_image_old-label,form#Bundles #courseToolsFeatureSortedList-label,form#Bundles #payment_type_id-label,form#Bundles #oldhideFromSearch-label,form#Bundles #trusted_by_err-label,form#Bundles #alumni_err-label,form#Bundles #bundle_tool_err-label{
+    display: none;
+}
+
+/* #fieldset-bundle_detail_Group{
+    height: 670px;
+} */
+
+form#Bundles #fieldset-learning_path_group .searchBoxDom,form#Bundles #fieldset-learning_path_group .SearchBoxPlugin{
+    width: 508px!important;
+}
+
+form#Bundles .alt-id-courses{
+    width: 1000px!important;
+}
+
+form#Bundles strong{
+    font-weight: 500;
+}
+
+form#Bundles .course_advisor_temp_sortable_list{
+    position: relative;
+    top: -15px;
+}
+
+form#Bundles .ui-sortable{
+    font-size: 12px;
+    width: 250px!important;
+}
+
+form#Bundles input[type="radio"]{
+    width: 17px;
+    height: 21px;
+    position: relative;
+    top: 4px;
+
+}
+
+form#Bundles input[type="radio"]:checked:before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 6px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0091ff;
+}
+
+form#Bundles #fieldset-learning_path_group,form#Bundles #fieldset-setting_group1,form#Bundles #fieldset-certificate_group{
+    position: relative;
+    top: -146px;
+}
+
+form#Bundles #label_inward-label, #label_inward{
+    position: relative;
+    top: -132px;
+}
+
+form#Bundles #addIntroVideoNote{
+    margin-top: -66px;
+}
+
+form#Bundles #label_inward-label,form#Bundles #label_inward{
+    display: none;
+}
+
+
+/* Basic Page UI part is End */
+
+/* Basic Details Conent part is start */
+.highlightText{
+    text-transform: uppercase;
+}
+
+form#bundleBenefits .form_fields_group_wrapper legend{
+    font-weight: 500;
+}
+
+form#bundleBenefits #aboutBundle-new-jobdesignation-new-desig_field-label{
+    width: 300px!important;
+}
+
+form#bundleBenefits .job-designation-container select{
+    max-width: 503px !important;
+}
+
+
+form#bundleBenefits select#aboutBundle-new-country_id{
+    width: auto!important;
+}
+
+form#bundleBenefits #add-label{
+    display: none;
+}
+
+#fieldset-basic_group{
+    width: 90%;
+}
+
+form#bundleBenefits .aboutBundle-new-jobdesignation-new-hiring_companies_sortable_list{
+    top: -20px;
+    width: 216px;
+}
+
+/* Basic Details content part is End */
+
+/*  Price  part is start */
+
+
+form#Bundles .addToolsNote  strong{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+form#Bundles .buttons .submit-element{
+    margin-left: 0;
+    position: relative;
+    left: 160px;
+
+}
+
+/*  Price  part is End */
